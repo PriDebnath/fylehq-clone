@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "less-compile": "npx lessc --js src/assets/css/less/input.less src/assets/css/less/output.css"
   },
   "private": true,
   "dependencies": {

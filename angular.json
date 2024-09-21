@@ -40,9 +40,10 @@
               }
             ],
             "styles": [
-              "src/theme.less",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/assets/styles.css",
+              "src/assets/less/input.less",
+              "src/assets/less/output.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },

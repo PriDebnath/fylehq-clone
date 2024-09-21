@@ -10,23 +10,18 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
+import { NgZorroAntdModule } from './modules/ng-zorro-antd/ng-zorro-antd.module';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgZorroAntdModule],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
     provideAnimationsAsync(),
-    provideHttpClient()
+    provideHttpClient(),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

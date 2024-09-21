@@ -3,6 +3,7 @@
   --brand-pink: rgb(255, 51, 102);
   --brand-blue: #2172e8;
   --brand-yellow: #ffd954;
+  --brand-black: rgb(45, 49, 66);
 }
 
 /* CSS RESET */
@@ -41,6 +42,14 @@ a {
 
 .bg-brand-blue {
   background-color: var(--brand-blue) !important;
+}
+
+.nav-bg, .header-bg{
+  background-image: linear-gradient(54deg, rgb(255, 242, 245) -1%, rgb(235, 243, 253) 74%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 0px !important;
+    background-position: center top;
 }
 
 /* FONT SIZE */
@@ -102,13 +111,13 @@ a {
   width: 1140px;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .brand-container {
     width: 1140px;
   }
 }
 
-@media (min-width: 960px) {
+@media (max-width: 960px) {
   .brand-container {
     width: 920px;
   }

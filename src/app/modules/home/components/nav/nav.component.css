@@ -1,0 +1,45 @@
+/*  */
+
+.btn-get-a-demo {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 7px 38px;
+  height: 44px;
+  width: 167px;
+  padding: 7px 38px;
+  font-size: 1rem;
+  border: 2px solid var(--brand-pink);
+}
+
+.btn-get-a-demo :hover {
+  background-color: var(--brand-pink);
+  color: white;
+}
+
+.nav-link {
+  color: var(--brand-black);
+  cursor: pointer;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px !important;
+  line-height: 1.43 !important;
+  padding: 30px 20px 0px;
+  height: 80px;
+}
+
+.nav-link:hover {
+  color: var(--brand-pink);
+}
+
+.nav-start {
+  font-size: 0px;
+  height: 36px;
+  margin-right: 40px;
+}
+
+.nav-mid {
+  height: 79px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}

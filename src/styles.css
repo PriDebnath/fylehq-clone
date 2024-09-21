@@ -1,1 +1,152 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --brand-pink: rgb(255, 51, 102);
+  --brand-blue: #2172e8;
+  --brand-yellow: #ffd954;
+}
+
+/* CSS RESET */
+
+body {
+  font-family: sans-serif !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* TEXT COLOR */
+
+.color-white {
+  color: white !important;
+}
+
+.color-black {
+  color: black !important;
+}
+
+.color-brand-blue {
+  color: var(--brand-blue) !important;
+}
+
+.color-brand-yellow {
+  color: var(--brand-yellow) !important;
+}
+
+/* BACKGROUND COLOR */
+
+.bg-brand-blue {
+  background-color: var(--brand-blue) !important;
+}
+
+/* FONT SIZE */
+
+.font-size-12px {
+  font-size: 12px;
+}
+
+.font-size-14px {
+  font-size: 14px;
+}
+
+.font-size-16px {
+  font-size: 16px;
+}
+
+.font-size-1rem {
+  font-size: 1rem;
+}
+
+.font-size-20px {
+  font-size: 20px;
+}
+
+.font-size-24px {
+  font-size: 24px;
+}
+
+/* FONT WEIGHT */
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+/* MEDIA  */
+.font-size-12-and-16px {
+  font-size: 12px;
+}
+
+@media (min-width: 900px) {
+  .font-size-12-and-16px {
+    font-size: 16px;
+  }
+}
+
+.brand-container {
+  width: 1140px;
+}
+
+@media (min-width: 1200px) {
+  .brand-container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 960px) {
+  .brand-container {
+    width: 920px;
+  }
+}
+
+/* PADDING */
+
+.brand-p-10px {
+  padding: 10px !important;
+}
+
+.brand-pr-20px {
+  padding-right: 20px !important;
+}
+
+.brand-pl-20px {
+  padding-left: 20px !important;
+}
+
+/* MARGIN */
+
+.brand-m-5px {
+  margin: 5px !important;
+}
+
+.brand-mr-5px {
+  margin-right: 5px !important;
+}
+
+.brand-ml-5px {
+  margin-left: 5px !important;
+}
+
+.brand-ml-10px {
+  margin-left: 10px !important;
+}
+
+.brand-lineheight-and-spacing {
+  letter-spacing: 0.4px !important;
+  line-height: 1.67 !important;
+}

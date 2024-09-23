@@ -99,13 +99,12 @@
 
   <!-- Main Nav -->
   <div
-    class="main-nav nav-bg d-flex justify-content-center position-fixed"
+    class="main-nav d-flex justify-content-center position-fixed"
     style="left: 0; right: 0"
+    [ngClass]="showInfo ? 'nav-bg' : 'bg-white'"
     [ngStyle]="{ top: showInfo ? '44px' : '0px' }"
   >
-    <div
-      class="brand-container d-flex align-items-center justify-content-between brand-p-10px bg-whitee"
-    >
+    <div class="brand-container d-flex align-items-center">
       <div class="nav-start logo-container">
         <span id="fyle-logo">
           <svg
@@ -168,18 +167,25 @@
           </svg>
         </span>
       </div>
-      <ul class="nav-mid d-flex" style="height: 80px">
-        <li class="nav-link">Product</li>
-        <li class="nav-link">Solutions</li>
-        <li class="nav-link">Accounting Firms</li>
-        <li class="nav-link">Pricing</li>
-        <li class="nav-link">Resources</li>
-      </ul>
-      <div class="nav-end d-flex align-items-center">
-        <p class="nav-link">Sign in</p>
-        <button nz-button nzType="default" class="btn-get-a-demo">
-          Get a demo
-        </button>
+      <div class="w-100 d-flex justify-content-between">
+        <ul class="nav-mid d-flex" style="height: 80px">
+          <li class="nav-link">Product</li>
+          <li class="nav-link">Solutions</li>
+          <li class="nav-link no-dropdown">Accounting Firms</li>
+          <li class="nav-link no-dropdown">Pricing</li>
+          <li class="nav-link">Resources</li>
+        </ul>
+        <div class="nav-end d-flex align-items-center">
+          <p class="nav-link">Sign in</p>
+          <button
+            nz-button
+            nzType="default"
+            class="btn-get-a-demo"
+            [ngClass]="{ 'btn-get-a-demo-active': !showInfo }"
+          >
+            Get a demo
+          </button>
+        </div>
       </div>
     </div>
   </div>

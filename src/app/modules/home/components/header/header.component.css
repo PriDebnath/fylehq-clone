@@ -1,0 +1,19 @@
+.btn-big-get-a-demo {
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  padding: 7px 38px !important;
+  width: 360px !important;
+  width: 52px !important;
+  padding: 10px 16px 8px;
+  font-size: 1rem !important;
+  border: 2px solid var(--brand-pink) !important;
+  background-color: var(--brand-pink) !important;
+  color: white !important;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.btn-big-get-a-demo:hover {
+  background-color: var(--brand-pink) !important;
+  opacity: 1;
+}

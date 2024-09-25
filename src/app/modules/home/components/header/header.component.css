@@ -1,19 +1,62 @@
+header h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.2px !important;
+  line-height: 1.2 !important;
+}
+
+header h2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px !important;
+  line-height: 1.4 !important;
+}
+
 .btn-big-get-a-demo {
   border-radius: 6px !important;
   font-weight: 700 !important;
-  padding: 7px 38px !important;
-  width: 360px !important;
-  width: 52px !important;
+  height: 52px !important;
   padding: 10px 16px 8px;
   font-size: 1rem !important;
   border: 2px solid var(--brand-pink) !important;
   background-color: var(--brand-pink) !important;
   color: white !important;
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.9;
+  padding: 10px 16px 8px;
+  width: 360px;
 }
 
 .btn-big-get-a-demo:hover {
   background-color: var(--brand-pink) !important;
   opacity: 1;
+}
+
+.header-img-container {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .header-img-container {
+    width: 570px;
+  }
+}
+
+@media (max-width: 960px) {
+  .header-img-container {
+    width: 480px;
+  }
+}
+@media (max-width: 760px) {
+  .header-img-container {
+    width: 360px;
+  }
+}
+
+.customer-logos {
+  border: 1px solid #2172e8;
+  background: #fff;
+  border-radius: 12px;
+  padding: 60px 25px;
+  transform: translateY(-40%);
 }

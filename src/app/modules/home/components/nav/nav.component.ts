@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -8,6 +8,8 @@ import { Component, HostListener } from '@angular/core';
 export class NavComponent {
   showInfo: boolean = true;
 
+  @Output() changeNavShowInfo = new EventEmitter();
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     console.log(window.scrollY);
@@ -16,5 +18,6 @@ export class NavComponent {
     } else {
       this.showInfo = true;
     }
+    // this.changeNavShowInfo.emit(this.showInfo);
   }
 }

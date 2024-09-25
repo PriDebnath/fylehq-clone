@@ -99,9 +99,13 @@
 
   <!-- Main Nav -->
   <div
-    class="main-nav d-flex justify-content-center position-fixed"
+    class="d-flex justify-content-center position-fixed"
     style="left: 0; right: 0"
-    [ngClass]="showInfo ? 'nav-bg' : 'bg-white'"
+    [ngClass]="{
+      'nav-bg': showInfo,
+      'bg-white': !showInfo,
+      'main-nav-shadow': !showInfo
+    }"
     [ngStyle]="{ top: showInfo ? '44px' : '0px' }"
   >
     <div class="brand-container d-flex align-items-center">
@@ -189,5 +193,4 @@
       </div>
     </div>
   </div>
-  <div class="" style="height: 200vh"></div>
 </nav>

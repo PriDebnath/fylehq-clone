@@ -1,2 +1,5 @@
-<app-nav></app-nav>
+<app-nav (changeNavShowInfo)="handleChangeNavShowInfo($event)"></app-nav>
+<div class="" [ngStyle]="{ 'margin-top': showNavInfo ? '124px' : '44px' }">
+  <app-header></app-header>
+</div>
 <p>home works!</p>

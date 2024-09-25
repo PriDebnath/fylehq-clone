@@ -1,0 +1,20 @@
+# netlify.toml
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
+  CI = "false"
+  
+[build]
+  # Directory where your Angular app is located after building
+  base = "/"
+
+  # Command to build your Angular app
+  command = "ng build"
+ 
+
+  # Publish directory for Netlify
+  publish = "dist/fylehq-clone/browser"
+  
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

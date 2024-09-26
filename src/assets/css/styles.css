@@ -187,3 +187,19 @@ img {
   letter-spacing: 0.4px !important;
   line-height: 1.67 !important;
 }
+
+.headline {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.2px !important;
+  line-height: 1.2 !important;
+  color: var(--brand-black);
+}
+
+.subline {
+  color: var(--brand-grey);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.4px !important;
+  line-height: 1.4 !important;
+}

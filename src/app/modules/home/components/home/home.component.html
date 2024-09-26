@@ -2,4 +2,15 @@
 <div class="" [ngStyle]="{ 'margin-top': showNavInfo ? '124px' : '44px' }">
   <app-header></app-header>
 </div>
-<p>home works!</p>
+<div class="brand-container m-auto">
+  <div class="d-flex justify-content-center">
+    <div class="col col-12 col-lg-10">
+      <app-headline-and-subline
+        [containerStyle]="{ padding: '0 15px' }"
+        [containerClass]="{ 'text-center': true }"
+        headline="Tired of chasing employees for expense receipts and manually matching credit card expenses?"
+        subline="Stop dealing with shoeboxes of receipts and tedious spreadsheets. Fyle helps you collect receipts 5X faster via text messages, codes expenses automatically, matches them to the right transactions, and exports them to your accounting system, giving you the shortest time to close."
+      ></app-headline-and-subline>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+* {
+  transition: 0.2s;
+}
+
+.feature-card {
+  letter-spacing: 0.4px !important;
+  line-height: 1.43 !important;
+}
+
+.feature-card svg {
+  opacity: 0;
+}
+
+.feature-card:hover {
+  transform: translateX(5px);
+}
+
+.feature-card-header-text {
+  color: var(--brand-black);
+}
+
+.feature-card:hover .feature-card-header-text {
+  color: var(--brand-blue);
+}
+
+.feature-card-sub-text {
+  color: var(--brand-grey);
+  letter-spacing: 0.34px !important;
+  line-height: 1.67 !important;
+}
+
+.feature-card:hover svg {
+  opacity: 1;
+}
+
+.feature-card:hover svg use {
+  fill: var(--brand-blue);
+}

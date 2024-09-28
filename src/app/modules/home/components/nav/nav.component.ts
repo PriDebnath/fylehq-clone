@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { svg } from './svg';
 
 @Component({
   selector: 'app-nav',
@@ -6,6 +7,7 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
   styleUrl: './nav.component.css',
 })
 export class NavComponent {
+  svg = svg;
   showInfo: boolean = true;
 
   @Output() changeNavShowInfo = new EventEmitter();

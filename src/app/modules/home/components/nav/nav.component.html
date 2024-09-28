@@ -108,7 +108,7 @@
     }"
     [ngStyle]="{ top: showInfo ? '44px' : '0px' }"
   >
-    <div class="brand-container d-flex align-items-center">
+    <div class="d-none brand-container d-flex align-items-center">
       <div class="nav-start logo-container">
         <span id="fyle-logo">
           <svg
@@ -173,7 +173,195 @@
       </div>
       <div class="w-100 d-flex justify-content-between">
         <ul class="nav-mid d-flex" style="height: 80px">
-          <li class="nav-link">Product</li>
+          <li class="nav-link" nz-dropdown [nzDropdownMenu]="menuProduct">
+            Product
+          </li>
+          <nz-dropdown-menu #menuProduct="nzDropdownMenu">
+            <div nz-menu nzSelectable class="w-100 bg-white">
+              <div class="row">
+                <div class="col">
+                  <div>
+                    <div class="d-flex">
+                      <span>
+                        <svg
+                          width="48"
+                          height="49"
+                          viewBox="0 0 48 49"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="0.375"
+                            y="0.432129"
+                            width="47.25"
+                            height="47.25"
+                            rx="2.625"
+                            stroke="#B3D2FF"
+                            stroke-width="0.75"
+                          />
+                          <path
+                            opacity="0.9"
+                            d="M17.0312 17.416H11.2564V15.2451C11.2564 13.6545 12.5461 12.3648 14.1367 12.3648C15.7273 12.3648 17.0169 13.6545 17.0169 15.2451V17.416H17.0312Z"
+                            fill="url(#paint0_linear_44_867)"
+                          />
+                          <path
+                            opacity="0.9"
+                            d="M32.7725 22.1948L16.9884 22.1948V12.3575L29.8922 12.3575C31.4828 12.3575 32.7725 13.6472 32.7725 15.2378V22.1948Z"
+                            fill="url(#paint1_linear_44_867)"
+                          />
+                          <path
+                            d="M32.751 15.5889V20.1815"
+                            stroke="#69A6FF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="square"
+                          />
+                          <path
+                            d="M14.5879 12.3574H29.8847C31.4681 12.3574 32.7506 13.6399 32.7506 15.2162"
+                            stroke="#69A6FF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="square"
+                          />
+                          <path
+                            d="M14.1223 12.3574C12.5388 12.3574 11.2563 13.6399 11.2563 15.2162V16.7566H14.1223"
+                            stroke="#343493"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M14.1221 12.3574C15.7055 12.3574 16.988 13.6399 16.988 15.2162V33.4793L19.9327 36.4241"
+                            stroke="#343493"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M32.2851 34.2533L30.1213 36.4242L27.499 33.8091L24.8623 36.4242L22.3618 33.9237"
+                            stroke="#69A6FF"
+                            stroke-miterlimit="10"
+                            stroke-linecap="square"
+                          />
+                          <path
+                            d="M21.2944 21.1408V18.9985H23.4439"
+                            stroke="#2172E8"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M23.4439 27.2901H21.2944V25.1406"
+                            stroke="#2172E8"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M26.3096 18.9985H28.459V21.1408"
+                            stroke="#2172E8"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M28.459 25.1406V27.2901H26.3096"
+                            stroke="#2172E8"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M21.2871 23.1406H28.4734"
+                            stroke="#2172E8"
+                            stroke-miterlimit="10"
+                            stroke-linecap="square"
+                          />
+                          <path
+                            d="M34.3508 23.1406H36.8872L34.2864 28.2635H37.3815L32.1799 36.8469L33.0827 30.5061H30.3027L31.9148 23.1406H34.3508Z"
+                            stroke="#FF3366"
+                            stroke-linecap="square"
+                            stroke-linejoin="round"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_44_867"
+                              x1="14.1438"
+                              y1="12.3648"
+                              x2="14.1438"
+                              y2="17.416"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="#C3DBFF" />
+                              <stop
+                                offset="0.17"
+                                stop-color="#C3DBFF"
+                                stop-opacity="0.99"
+                              />
+                              <stop
+                                offset="0.3"
+                                stop-color="#C6DCFF"
+                                stop-opacity="0.95"
+                              />
+                              <stop
+                                offset="0.42"
+                                stop-color="#C9DFFF"
+                                stop-opacity="0.89"
+                              />
+                              <stop
+                                offset="0.53"
+                                stop-color="#CFE2FF"
+                                stop-opacity="0.8"
+                              />
+                              <stop
+                                offset="0.64"
+                                stop-color="#D6E6FF"
+                                stop-opacity="0.68"
+                              />
+                              <stop
+                                offset="0.74"
+                                stop-color="#DEEBFF"
+                                stop-opacity="0.53"
+                              />
+                              <stop
+                                offset="0.84"
+                                stop-color="#E9F1FF"
+                                stop-opacity="0.36"
+                              />
+                              <stop
+                                offset="0.93"
+                                stop-color="#F4F8FF"
+                                stop-opacity="0.17"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="white"
+                                stop-opacity="0"
+                              />
+                            </linearGradient>
+                            <linearGradient
+                              id="paint1_linear_44_867"
+                              x1="24.8769"
+                              y1="22.1948"
+                              x2="24.8769"
+                              y2="12.3575"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stop-color="white" stop-opacity="0" />
+                              <stop offset="1" stop-color="#C3DBFF" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </span>
+                      <div class="feature-card">
+                        <div class="feature-card-header-text">
+                          Text Messages
+                          <span id="right-arrow" [innerHTML]="svg.right_arrow">
+                          </span>
+                        </div>
+                        <div class="feature-card-sub-text">
+                          The biggest innovation in receipt tracking since
+                          mobiles
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul>
+                <li nz-menu-item>1st menu item</li>
+                <li nz-menu-item>2nd menu item</li>
+                <li nz-menu-item>3rd menu item</li>
+                <li nz-menu-item nzDanger>4th danger item</li>
+              </ul>
+            </div>
+          </nz-dropdown-menu>
           <li class="nav-link">Solutions</li>
           <li class="nav-link no-dropdown">Accounting Firms</li>
           <li class="nav-link no-dropdown">Pricing</li>
@@ -189,6 +377,63 @@
           >
             Get a demo
           </button>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      nz-menu
+      nzSelectable
+      class="w-100"
+      style="background-color: rgba(134, 121, 121, 0.459)"
+    >
+      <div class="brand-container bg-white m-auto">
+        <h3
+          class="font-weight-400 font-size-14px color-brand-grey"
+          style="margin-bottom: 25px"
+        >
+          FEATURES
+        </h3>
+        <div class="row">
+          <div class="col">
+            <div>
+              <app-nav-feature-card
+                [svg]="svg.svg_text_messages"
+                headline="Text Messages"
+                subline="The biggest innovation in receipt tracking since mobiles"
+              >
+              </app-nav-feature-card>
+
+              <app-nav-feature-card
+                [svg]="svg.receipts"
+                headline="Receipts"
+                subline="Track receipts from everyday apps in a few clicks"
+              >
+              </app-nav-feature-card>
+              <app-nav-feature-card
+                [svg]="svg.expenses"
+                headline="Expenses"
+                subline="Report expenses, mileages, per-diems and more"
+              >
+              </app-nav-feature-card>
+              <app-nav-feature-card
+                [svg]="svg.approvals"
+                headline="Approvals"
+                subline="Set up any approval workflow and approve on-the-go"
+              >
+              </app-nav-feature-card>
+            </div>
+
+            <div>
+              <a href="" class="view-all-features">
+                View all features
+                <span
+                  [innerHTML]="svg.right_arrow | htmlSanitizer"
+                  class="mx-2"
+                ></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

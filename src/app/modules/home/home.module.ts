@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeadlineAndSublineComponent } from './components/headline-and-subline/headline-and-subline.component';
 import { NavFeatureCardComponent } from './components/nav/nav-feature-card/nav-feature-card.component';
 import { HtmlSanitizerPipe } from './pipes/html-sanitizer/html-sanitizer.pipe';
+import { DropdownContentProductComponent } from './components/nav/dropdown-content-product/dropdown-content-product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HtmlSanitizerPipe } from './pipes/html-sanitizer/html-sanitizer.pipe';
     HeadlineAndSublineComponent,
     NavFeatureCardComponent,
     HtmlSanitizerPipe,
+    DropdownContentProductComponent,
   ],
   imports: [CommonModule, NgZorroAntdModule, HomeRoutingModule],
 })

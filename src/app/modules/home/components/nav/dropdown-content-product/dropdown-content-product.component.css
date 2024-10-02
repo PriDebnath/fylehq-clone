@@ -1,0 +1,17 @@
+/* Dropdown style start */
+
+.view-all-features {
+  color: var(--brand-black);
+  letter-spacing: 0.34px !important;
+  line-height: 1.67 !important;
+}
+
+.view-all-features:hover {
+  color: var(--brand-pink);
+}
+
+.view-all-features:hover svg use {
+  fill: var(--brand-pink);
+}
+
+/* Dropdown style end */

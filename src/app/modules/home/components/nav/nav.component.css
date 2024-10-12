@@ -55,3 +55,8 @@
 .no-dropdown {
   padding: 31px 30px 0px;
 }
+
+.nzOverlayClassName {
+  padding: 0.3rem;
+  background-color: red;
+}

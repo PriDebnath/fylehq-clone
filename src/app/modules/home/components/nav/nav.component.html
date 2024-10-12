@@ -176,11 +176,14 @@
           <li
             class="nav-link"
             nz-dropdown
-            [nzDropdownMenu]="menuProduct"
+            nzPlacement="bottomCenter"
             [nzVisible]="true"
+            [nzOverlayClassName]="'nzOverlayClassName'"
+            (mouseover)="handleNavLinkMouseover('Product')"
           >
             Product
-            <!-- <nz-dropdown-menu #menuProduct="nzDropdownMenu">
+            <!-- <nz-dropdown-menu #menuProduct="nzDropdownMenu">            [nzDropdownMenu]="menuProduct"
+
               <div
                 nz-menu
                 nzSelectable
@@ -195,7 +198,12 @@
             </nz-dropdown-menu> -->
           </li>
 
-          <li class="nav-link">Solutions</li>
+          <li
+            class="nav-link"
+            (mouseover)="handleNavLinkMouseover('Solutions')"
+          >
+            Solutions
+          </li>
           <li class="nav-link no-dropdown">Accounting Firms</li>
           <li class="nav-link no-dropdown">Pricing</li>
           <li class="nav-link">Resources</li>
@@ -216,19 +224,29 @@
     <!--  -->
   </div>
 </nav>
-
 <!--  dropdown contents start -->
-<nz-dropdown-menu #menuProduct="nzDropdownMenu">
-  <div
-    nz-menu
-    nzSelectable
-    style="
-      width: 100vw;
-      box-shadow: 0 20px 26px 0 hsla(0, 0%, 45%, 0.05),
-        0 20px 26px 0 rgba(0, 0, 0, 0.08);
-    "
-  >
-    <app-dropdown-content-product></app-dropdown-content-product>
-  </div>
-</nz-dropdown-menu>
+<!-- <nz-dropdown-menu
+    #menuProduct="nzDropdownMenu"
+    style="padding: 1rem !important; background-color: magenta !important"
+  > -->
+<div
+  nz-menu
+  nzSelectable
+  style="
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 20px 26px 0 hsla(0, 0%, 45%, 0.05),
+      0 20px 26px 0 rgba(0, 0, 0, 0.08);
+  "
+  [ngStyle]="{ top: showInfo ? '120px' : '80px' }"
+  *ngIf="activeDropdownMenu"
+  (mouseleave)="handleDropdownMenuMouseleave()"
+>
+  <app-dropdown-content-product
+    *ngIf="activeDropdownMenu == 'Product'"
+  ></app-dropdown-content-product>
+</div>
+<!-- </nz-dropdown-menu> -->
 <!--  dropdown contents end -->

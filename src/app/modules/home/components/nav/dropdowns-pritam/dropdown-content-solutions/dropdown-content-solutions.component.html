@@ -1,1 +1,53 @@
-<p>dropdown-content-solutions works!</p>
+<div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
+  <div class="d-flex">
+    <div class="w-25" style="background-color: red">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        BY INDUSTRY
+      </h3>
+      <div class="row">
+        <!-- Col 1 -->
+        <div class="col">
+          <div>
+            @for (item of by_industry_list; track item.title) {
+            <app-nav-feature-card
+              [svg]="item.svg"
+              [redirectTo]="item.link"
+              [headline]="item.title"
+            >
+            </app-nav-feature-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-75" style="background-color: rgb(0, 255, 213)">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        RELATED BLOGS
+      </h3>
+      <div class="row">
+        <div class="col">
+          <div>
+            @for (item of by_industry_list; track item.title) {
+            <app-nav-feature-card
+              [svg]="item.svg"
+              [redirectTo]="item.link"
+              [headline]="item.title"
+            >
+            </app-nav-feature-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

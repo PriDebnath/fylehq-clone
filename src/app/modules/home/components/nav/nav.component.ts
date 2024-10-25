@@ -9,7 +9,7 @@ import { svg } from './svg';
 export class NavComponent {
   svg = svg;
   showInfo: boolean = true;
-  activeDropdownMenu: string = ''
+  activeDropdownMenu: string = 'Solutions';
 
   @Output() changeNavShowInfo = new EventEmitter();
 
@@ -25,11 +25,11 @@ export class NavComponent {
   }
 
   handleNavLinkMouseover(event: any) {
-  this.activeDropdownMenu =  event
+    this.activeDropdownMenu = event;
     console.log(event);
   }
 
-  handleDropdownMenuMouseleave(){
-    this.activeDropdownMenu = ''
+  handleDropdownMenuMouseleave() {
+    this.activeDropdownMenu = '';
   }
 }

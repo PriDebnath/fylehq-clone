@@ -9,7 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeadlineAndSublineComponent } from './components/headline-and-subline/headline-and-subline.component';
 import { NavFeatureCardComponent } from './components/nav/nav-feature-card/nav-feature-card.component';
 import { HtmlSanitizerPipe } from './pipes/html-sanitizer/html-sanitizer.pipe';
-import { DropdownContentProductComponent } from './components/nav/dropdown-content-product/dropdown-content-product.component';
+import { DropdownContentProductComponent } from './components/nav/dropdowns-pritam/dropdown-content-product/dropdown-content-product.component';
+import { DropdownContentSolutionsComponent } from './components/nav/dropdowns-pritam/dropdown-content-solutions/dropdown-content-solutions.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DropdownContentProductComponent } from './components/nav/dropdown-conte
     NavFeatureCardComponent,
     HtmlSanitizerPipe,
     DropdownContentProductComponent,
+    DropdownContentSolutionsComponent,
   ],
   imports: [CommonModule, NgZorroAntdModule, HomeRoutingModule],
 })

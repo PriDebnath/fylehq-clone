@@ -5,6 +5,9 @@
 .feature-card {
   letter-spacing: 0.4px !important;
   line-height: 1.43 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .feature-card svg {

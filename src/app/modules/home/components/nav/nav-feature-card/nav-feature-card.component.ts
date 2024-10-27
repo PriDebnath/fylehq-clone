@@ -10,4 +10,5 @@ export class NavFeatureCardComponent {
   @Input() headline: string = '';
   @Input() subline: string = '';
   @Input() redirectTo: string = '';
+  @Input() lastItem: boolean = false;
 }

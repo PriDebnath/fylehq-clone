@@ -1,21 +1,22 @@
 <div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
   <div class="d-flex">
-    <div class="w-25" style="background-color: red">
+    <div class="w-25">
       <h3
         class="font-weight-400 font-size-14px color-brand-grey"
         style="margin-bottom: 25px"
       >
         BY INDUSTRY
       </h3>
-      <div class="row">
+      <div class="row py-3">
         <!-- Col 1 -->
         <div class="col">
           <div>
-            @for (item of by_industry_list; track item.title) {
+            @for (item of by_industry_list; track item.title;let last = $last) {
             <app-nav-feature-card
               [svg]="item.svg"
               [redirectTo]="item.link"
               [headline]="item.title"
+              [lastItem]="last"
             >
             </app-nav-feature-card>
             } @empty {
@@ -25,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="w-75" style="background-color: rgb(0, 255, 213)">
+    <div class="w-75">
       <h3
         class="font-weight-400 font-size-14px color-brand-grey"
         style="margin-bottom: 25px"
@@ -33,20 +34,94 @@
         RELATED BLOGS
       </h3>
       <div class="row">
-        <div class="col">
-          <div>
-            @for (item of by_industry_list; track item.title) {
-            <app-nav-feature-card
-              [svg]="item.svg"
-              [redirectTo]="item.link"
-              [headline]="item.title"
-            >
-            </app-nav-feature-card>
-            } @empty {
-            <li>There are no items.</li>
-            }
-          </div>
+        <div class="d-flex">
+          @for (item of blog_list; track item.title; let index = $index;let last
+          = $last) {
+          <a
+            [href]="item.link"
+            class="d-block"
+            class="blog-card"
+            [ngStyle]="{ 'margin-right': last ? '0px' : '40px' }"
+          >
+            <img [src]="item.img_src" />
+            <p style="line-height: normal; padding: 1rem">{{ item.title }}</p>
+            <div style="line-height: normal; padding: 0 1rem 1rem 1rem">
+              <a
+                href="https://www.fylehq.com/product"
+                class="link-with-right-arrow"
+              >
+                Learn more
+                <span class="mx-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                  >
+                    <defs>
+                      <path
+                        id="x612hm8boa"
+                        d="M7 8c-.298 0-.597-.112-.825-.335L.342 1.951C-.114 1.504-.114.782.342.335c.456-.447 1.194-.447 1.65 0L7 5.241 12.01.335c.456-.447 1.193-.447 1.65 0 .456.447.456 1.17 0 1.616L7.824 7.665C7.598 7.888 7.3 8 7 8"
+                      />
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                      <g>
+                        <g>
+                          <g>
+                            <g
+                              transform="translate(-751 -2888) translate(0 2778) translate(526 80) rotate(-90 134.5 -90.5)"
+                            >
+                              <use fill="#6F718F" xlink:href="#x612hm8boa" />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </a>
+          }
         </div>
+      </div>
+      <!--  -->
+      <div class="pritam"></div>
+
+      <div>
+        <a href="https://www.fylehq.com/blog" class="link-with-right-arrow">
+          View all blogs
+          <span class="mx-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+            >
+              <defs>
+                <path
+                  id="x612hm8boa"
+                  d="M7 8c-.298 0-.597-.112-.825-.335L.342 1.951C-.114 1.504-.114.782.342.335c.456-.447 1.194-.447 1.65 0L7 5.241 12.01.335c.456-.447 1.193-.447 1.65 0 .456.447.456 1.17 0 1.616L7.824 7.665C7.598 7.888 7.3 8 7 8"
+                />
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g>
+                  <g>
+                    <g>
+                      <g
+                        transform="translate(-751 -2888) translate(0 2778) translate(526 80) rotate(-90 134.5 -90.5)"
+                      >
+                        <use fill="#6F718F" xlink:href="#x612hm8boa" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
   </div>

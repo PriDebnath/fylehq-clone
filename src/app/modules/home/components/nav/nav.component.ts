@@ -30,6 +30,6 @@ export class NavComponent {
   }
 
   handleDropdownMenuMouseleave() {
-    this.activeDropdownMenu = '';
+    // this.activeDropdownMenu = '';
   }
 }

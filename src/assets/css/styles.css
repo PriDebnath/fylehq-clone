@@ -231,3 +231,17 @@ img {
   height: 1px;
   margin: 20px 0;
 }
+
+.link-with-right-arrow {
+  color: var(--brand-black);
+  letter-spacing: 0.34px !important;
+  line-height: 1.67 !important;
+}
+
+.link-with-right-arrow:hover {
+  color: var(--brand-pink);
+}
+
+.link-with-right-arrow:hover svg use {
+  fill: var(--brand-pink);
+}

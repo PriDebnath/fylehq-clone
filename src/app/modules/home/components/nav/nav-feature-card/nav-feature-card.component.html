@@ -1,4 +1,4 @@
-<a class="d-flex" [href]="redirectTo" style="margin-bottom: 30px">
+<a class="d-flex" [href]="redirectTo" [ngStyle]="{ 'margin-bottom': lastItem ?  '0' :' 30px' }">
   <span [innerHTML]="svg | htmlSanitizer"> </span>
   <div class="feature-card px-2" style="max-width: 190px">
     <div class="feature-card-header-text">

@@ -9,7 +9,7 @@ import { svg } from './svg';
 export class NavComponent {
   svg = svg;
   showInfo: boolean = true;
-  activeDropdownMenu: string = 'Solutions';
+  activeDropdownMenu: string = '';
 
   @Output() changeNavShowInfo = new EventEmitter();
 

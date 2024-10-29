@@ -1,0 +1,119 @@
+<div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
+  <div class="d-flex">
+    <div class="w-25">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        LEARN
+      </h3>
+      <div class="row py-3">
+        <!-- Col 1 -->
+        <div class="col">
+          <div>
+            @for (item of learn_list; track item.title;let last = $last) {
+            <app-nav-feature-card
+              [svg]="item.svg"
+              [redirectTo]="item.link"
+              [headline]="item.title"
+              [lastItem]="last"
+            >
+            </app-nav-feature-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-25">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        CUSTOMERS
+      </h3>
+      <div class="row py-3">
+        <!-- Col 1 -->
+        <div class="col">
+          <div>
+            @for (item of customers_list; track item.title;let last = $last) {
+            <app-nav-feature-card
+              [svg]="item.svg"
+              [redirectTo]="item.link"
+              [headline]="item.title"
+              [lastItem]="last"
+            >
+            </app-nav-feature-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-25">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        COMPANY
+      </h3>
+      <div class="row py-3">
+        <!-- Col 1 -->
+        <div class="col">
+          <div>
+            @for (item of company_list; track item.title;let last = $last) {
+            <app-nav-feature-card
+              [svg]="item.svg"
+              [redirectTo]="item.link"
+              [headline]="item.title"
+            >
+            </app-nav-feature-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </div>
+          <!-- </div> -->
+          <ul class="px-2" style="margin-left: 61px">
+            <a href="https://www.fylehq.com/partners/accounting-firms">
+              <li
+                class="color-brand-black-hover-brand-blue font-size-14px font-weight-400 line-height-2 list-style-initial"
+              >
+                Accounting firms
+              </li>
+            </a>
+            <a href="https://www.fylehq.com/banks">
+              <li
+                class="color-brand-black-hover-brand-blue font-size-14px font-weight-400 line-height-2 list-style-initial"
+              >
+                Banks
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="w-25">
+      <h3
+        class="font-weight-400 font-size-14px color-brand-grey"
+        style="margin-bottom: 25px"
+      >
+        POPULAR
+      </h3>
+      <div class="row">
+        <div class="d-flex">
+          @for (item of resourse_popular_list; track item.title; let index =
+          $index;let last = $last) {
+          <app-nav-blog-card
+            [item]="item"
+            [lastItem]="last"
+          ></app-nav-blog-card>
+          }
+        </div>
+      </div>
+      <!--  -->
+      <div class="pritam"></div>
+    </div>
+  </div>
+</div>

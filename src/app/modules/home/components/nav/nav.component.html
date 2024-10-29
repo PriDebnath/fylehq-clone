@@ -189,9 +189,26 @@
           >
             Solutions
           </li>
-          <li class="nav-link no-dropdown">Accounting Firms</li>
-          <li class="nav-link no-dropdown">Pricing</li>
-          <li class="nav-link">Resources</li>
+          <li class="nav-link no-dropdown">
+            <a
+              href="https://www.fylehq.com/partners/accounting-firms"
+               
+            >
+              Accounting Firms
+            </a>
+          </li>
+          <li class="nav-link no-dropdown">
+            <a href="https://www.fylehq.com/pricing"  >
+              Pricing
+            </a>
+          </li>
+
+          <li
+            class="nav-link"
+            (mouseover)="handleNavLinkMouseover('Resources')"
+          >
+            Resources
+          </li>
         </ul>
         <div class="nav-end d-flex align-items-center">
           <p class="nav-link">Sign in</p>
@@ -235,6 +252,9 @@
   <app-dropdown-content-solutions
     *ngIf="activeDropdownMenu == 'Solutions'"
   ></app-dropdown-content-solutions>
+  <app-dropdown-content-resources
+    *ngIf="activeDropdownMenu == 'Resources'"
+  ></app-dropdown-content-resources>
 </div>
 <!-- </nz-dropdown-menu> -->
 <!--  dropdown contents end -->

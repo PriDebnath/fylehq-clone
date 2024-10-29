@@ -11,6 +11,8 @@ import { NavFeatureCardComponent } from './components/nav/nav-feature-card/nav-f
 import { HtmlSanitizerPipe } from './pipes/html-sanitizer/html-sanitizer.pipe';
 import { DropdownContentProductComponent } from './components/nav/dropdowns-pritam/dropdown-content-product/dropdown-content-product.component';
 import { DropdownContentSolutionsComponent } from './components/nav/dropdowns-pritam/dropdown-content-solutions/dropdown-content-solutions.component';
+import { DropdownContentResourcesComponent } from './components/nav/dropdowns-pritam/dropdown-content-resources/dropdown-content-resources.component';
+import { NavBlogCardComponent } from './components/nav/nav-blog-card/nav-blog-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { DropdownContentSolutionsComponent } from './components/nav/dropdowns-pr
     HtmlSanitizerPipe,
     DropdownContentProductComponent,
     DropdownContentSolutionsComponent,
+    DropdownContentResourcesComponent,
+    NavBlogCardComponent,
   ],
   imports: [CommonModule, NgZorroAntdModule, HomeRoutingModule],
 })

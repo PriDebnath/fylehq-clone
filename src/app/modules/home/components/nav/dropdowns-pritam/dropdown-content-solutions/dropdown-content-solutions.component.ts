@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogNav } from '../../../../models/nav.model';
 
 @Component({
   selector: 'app-dropdown-content-solutions',
@@ -106,23 +107,26 @@ export class DropdownContentSolutionsComponent {
     },
   ];
 
-  blog_list = [
+  blog_list: BlogNav[] = [
     {
       title:
         'Why Should The Construction Industry Solve The Receipt Collection Problem In 2024',
       link: 'https://www.fylehq.com/blog/construction-industry-must-solve-receipt-collection-problem',
       img_src: '/assets/images/blog-1.png',
+      link_text: 'Learn more',
     },
     {
       title:
         'Non Profit Expense Management IRS Guidelines for Nonprofit Expense Reimbursement Policies',
       link: 'https://www.fylehq.com/blog/nonprofit-expense-reimbursement-policy-guideline',
       img_src: '/assets/images/blog-2.png',
+      link_text: 'Learn more',
     },
     {
       title: 'Are You Still Chasing Employees for Expense Receipts in 2024?',
       link: 'https://www.fylehq.com/blog/still-chasing-employees-for-expense-receipts',
       img_src: '/assets/images/blog-3.png',
+      link_text: 'Learn more',
     },
   ];
 }

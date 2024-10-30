@@ -13,6 +13,9 @@ import { DropdownContentProductComponent } from './components/nav/dropdowns-prit
 import { DropdownContentSolutionsComponent } from './components/nav/dropdowns-pritam/dropdown-content-solutions/dropdown-content-solutions.component';
 import { DropdownContentResourcesComponent } from './components/nav/dropdowns-pritam/dropdown-content-resources/dropdown-content-resources.component';
 import { NavBlogCardComponent } from './components/nav/nav-blog-card/nav-blog-card.component';
+import { GetADemoModalComponent } from './components/modals/get-a-demo-modal/get-a-demo-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputBrandComponent } from './components/shared/input-brand/input-brand.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,15 @@ import { NavBlogCardComponent } from './components/nav/nav-blog-card/nav-blog-ca
     DropdownContentSolutionsComponent,
     DropdownContentResourcesComponent,
     NavBlogCardComponent,
+    GetADemoModalComponent,
+    InputBrandComponent,
   ],
-  imports: [CommonModule, NgZorroAntdModule, HomeRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgZorroAntdModule,
+    HomeRoutingModule,
+  ],
 })
 export class HomeModule {}

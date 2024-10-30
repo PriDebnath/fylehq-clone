@@ -1,18 +1,30 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { svg } from './svg';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-modal.component';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
+  constructor(public nzModalService: NzModalService) {}
   svg = svg;
   showInfo: boolean = true;
-  activeDropdownMenu: string = 'Resources';
+  activeDropdownMenu: string = '';
 
   @Output() changeNavShowInfo = new EventEmitter();
 
+  ngOnInit(): void {
+    this.handleGetDemo();
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     console.log(window.scrollY);
@@ -30,6 +42,14 @@ export class NavComponent {
   }
 
   handleDropdownMenuMouseleave() {
-    // this.activeDropdownMenu = '';
+    this.activeDropdownMenu = '';
+  }
+
+  handleGetDemo() {
+    this.nzModalService.create({
+      nzContent: GetADemoModalComponent,
+      nzFooter: null,
+      nzClosable: false,
+    });
   }
 }

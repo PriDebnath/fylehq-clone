@@ -190,17 +190,12 @@
             Solutions
           </li>
           <li class="nav-link no-dropdown">
-            <a
-              href="https://www.fylehq.com/partners/accounting-firms"
-               
-            >
+            <a href="https://www.fylehq.com/partners/accounting-firms">
               Accounting Firms
             </a>
           </li>
           <li class="nav-link no-dropdown">
-            <a href="https://www.fylehq.com/pricing"  >
-              Pricing
-            </a>
+            <a href="https://www.fylehq.com/pricing"> Pricing </a>
           </li>
 
           <li
@@ -211,12 +206,20 @@
           </li>
         </ul>
         <div class="nav-end d-flex align-items-center">
-          <p class="nav-link">Sign in</p>
+          <p class="nav-link">
+            <a
+              style="color: inherit"
+              href="https://app.fylehq.com/app/accounts/?_gl=1*1kxqpx5*_gcl_au*MTQ2NjY4OTkyMC4xNzIzNjM1ODcw#/signin"
+            >
+              Sign in
+            </a>
+          </p>
           <button
             nz-button
             nzType="default"
             class="btn-get-a-demo"
             [ngClass]="{ 'btn-get-a-demo-active': !showInfo }"
+            (click)="handleGetDemo()"
           >
             Get a demo
           </button>

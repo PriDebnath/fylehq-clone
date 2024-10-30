@@ -1,0 +1,22 @@
+* {
+  transition: 0.2s;
+}
+
+::ng-deep .ant-modal-content {
+  /* /* border: 1px solid #dbedfe; */
+  border-radius: 0.75rem;
+  width: 860px;
+  /* padding: 0 !important; */
+  /* overflow: hidden !important; */
+}
+
+::ng-deep .ant-modal-body {
+  border: 1px solid #dbedfe;
+  border-radius: 0.75rem;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+#input:focus + #label {
+  transform: translate(-1rem, -2rem);
+}

@@ -1,0 +1,64 @@
+<div class="d-flex">
+  <div class="w-50"><img src="/assets/images/get-a-demo-modal-left.png" /></div>
+  <div class="w-50 p-4">
+    <div class="get-a-demo-header d-flex justify-content-between">
+      <h3
+        class="color-brand-black font-size-20px font-weight-500 line-height-1-4"
+      >
+        Talk to a Fyle Specialist
+      </h3>
+      <div
+        class="color-brand-grey font-size-24px font-weight-600 cursor-pointer"
+        (click)="closeModal()"
+      >
+        &times;
+      </div>
+    </div>
+    <form action="" class="w-100">
+      <div>
+        <app-input-brand
+          labelText="Work email*"
+          invalidText="Please enter a valid work email address."
+          (inputOutput)="handleInputOutput($event, 'work_email')"
+        ></app-input-brand>
+      </div>
+      <div>
+        <app-input-brand
+          labelText="Full name*"
+          invalidText="This is required."
+          (inputOutput)="handleInputOutput($event, 'full_name')"
+        ></app-input-brand>
+      </div>
+      <div>
+        <app-input-brand
+          labelText="Phone number*"
+          invalidText="This is required."
+          (inputOutput)="handleInputOutput($event, 'phone_number')"
+        ></app-input-brand>
+      </div>
+
+      <div class="my-3">
+        <nz-select class="w-100">
+          @for(item of selectCompanySize;track item ){
+          <nz-option [nzValue]="item" [nzLabel]="item"></nz-option>
+          }
+        </nz-select>
+      </div>
+      <div>
+        <label nz-checkbox [(ngModel)]="policy" class="color-brand-grey"
+          >I agree with Fyle's
+          <a
+            class="color-brand-grey-hover-brand-pink"
+            href="https://www.fylehq.com/privacy/terms-and-conditions"
+            style="text-decoration: underline"
+          >
+            terms and conditions</a
+          >
+          , and provide consent to communication from the team.</label
+        >
+      </div>
+      <!-- <
+        -->
+    </form>
+  </div>
+</div>

@@ -69,6 +69,14 @@ img {
   color: var(--brand-blue) !important;
 }
 
+.color-brand-grey-hover-brand-pink {
+  color: var(--brand-grey) !important;
+}
+
+.color-brand-grey-hover-brand-pink:hover {
+  color: var(--brand-pink) !important;
+}
+
 /* BACKGROUND COLOR */
 
 .bg-brand-blue {
@@ -244,4 +252,8 @@ img {
 
 .link-with-right-arrow:hover svg use {
   fill: var(--brand-pink);
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
 }

@@ -1,0 +1,16 @@
+<div id="input-container">
+  <input
+    id="input"
+    #inputField="ngModel"
+    placeholder=""
+    [(ngModel)]="inputValue"
+    (input)="handleInput($event)"
+  />
+  <label id="label" for="input">{{ labelText }}</label>
+</div>
+<div
+  *ngIf="inputField.touched && !inputValue"
+  style="font-size: 0.5rem; color: red"
+>
+  {{ invalidText }}
+</div>

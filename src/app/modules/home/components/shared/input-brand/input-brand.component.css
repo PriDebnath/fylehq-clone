@@ -1,0 +1,45 @@
+* {
+  transition: 0.2s;
+}
+
+:host #input-container {
+  height: 1.5rem;
+  margin: 1.5rem 0 0 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+:host #input {
+  position: absolute;
+  outline: none;
+  border: none;
+  padding: 0.2rem;
+  /* border-bottom: 2px solid var(--brand-grey); */
+  border-bottom: 2px solid #dbe1e6;
+}
+
+:host #label {
+  position: absolute;
+  top: -1rem;
+  transform: translateY(0);
+  font-size: 1rem;
+  color: var(--brand-grey);
+}
+
+:host #input:placeholder-shown + #label {
+  transform: translateY(1rem);
+  font-size: 1rem;
+  color: var(--brand-grey);
+}
+
+:host #input:not(:placeholder-shown) + #label {
+  font-size: 0.8rem;
+  color: var(--brand-grey);
+}
+
+:host #input:focus + #label {
+  transform: translateY(0);
+  font-size: 0.8rem;
+  color: var(--brand-pink);
+}

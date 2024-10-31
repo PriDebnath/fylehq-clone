@@ -17,6 +17,4 @@
   overflow: hidden !important;
 }
 
-#input:focus + #label {
-  transform: translate(-1rem, -2rem);
-}
+ 

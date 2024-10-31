@@ -257,3 +257,21 @@ img {
 .cursor-pointer {
   cursor: pointer !important;
 }
+
+.btn-get-a-demo {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  padding: 7px 38px !important;
+  height: 44px !important;
+  width: 167px !important;
+  padding: 7px 38px !important;
+  font-size: 1rem !important;
+  border: 2px solid var(--brand-pink) !important;
+  background-color: transparent !important;
+}
+
+.btn-get-a-demo:hover,
+.btn-get-a-demo-active {
+  background-color: var(--brand-pink) !important;
+  color: white !important;
+}

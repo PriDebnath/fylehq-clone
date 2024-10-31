@@ -8,9 +8,8 @@ interface GetADemoFormField {
   styleUrl: './get-a-demo-modal.component.css',
 })
 export class GetADemoModalComponent implements AfterContentInit {
-  handleGetDemo() {
-    throw new Error('Method not implemented.');
-  }
+  submitting = false;
+  thankyouPage = false;
   value: any;
   @ViewChild('input') input: any;
   invalid: any;
@@ -42,4 +41,11 @@ export class GetADemoModalComponent implements AfterContentInit {
   }
 
   closeModal() {}
+  handleGetDemo() {
+    this.submitting = true;
+
+    setTimeout(() => {
+      this.thankyouPage = true;
+    }, 2000);
+  }
 }

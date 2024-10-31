@@ -1,6 +1,9 @@
 <div class="d-flex">
   <div class="w-50"><img src="/assets/images/get-a-demo-modal-left.png" /></div>
-  <div class="w-50 p-4">
+  <div
+    class="w-50 d-flex flex-column justify-content-between"
+    style="padding: 2rem"
+  >
     <div class="get-a-demo-header d-flex justify-content-between">
       <h3
         class="color-brand-black font-size-20px font-weight-500 line-height-1-4"
@@ -14,22 +17,26 @@
         &times;
       </div>
     </div>
-    <form action="" class="w-100">
-      <div>
+    <form
+      action=""
+      class="w-100 d-flex flex-column justify-content-between"
+      style="flex: 1"
+    >
+      <div class="py-2">
         <app-input-brand
           labelText="Work email*"
           invalidText="Please enter a valid work email address."
           (inputOutput)="handleInputOutput($event, 'work_email')"
         ></app-input-brand>
       </div>
-      <div>
+      <div class="py-2">
         <app-input-brand
           labelText="Full name*"
           invalidText="This is required."
           (inputOutput)="handleInputOutput($event, 'full_name')"
         ></app-input-brand>
       </div>
-      <div>
+      <div class="py-2">
         <app-input-brand
           labelText="Phone number*"
           invalidText="This is required."
@@ -38,13 +45,13 @@
       </div>
 
       <div class="my-3">
-        <nz-select class="w-100">
+        <nz-select nzPlaceHolder="Select company size*" class="w-100">
           @for(item of selectCompanySize;track item ){
           <nz-option [nzValue]="item" [nzLabel]="item"></nz-option>
           }
         </nz-select>
       </div>
-      <div>
+      <div class="py-2">
         <label nz-checkbox [(ngModel)]="policy" class="color-brand-grey"
           >I agree with Fyle's
           <a
@@ -57,8 +64,21 @@
           , and provide consent to communication from the team.</label
         >
       </div>
-      <!-- <
-        -->
+      <div class="pt-2">
+        <button
+          nz-button
+          nzType="default"
+          class="btn-get-a-demo mt-3 d-flex"
+          style="width: 100% !important"
+          [ngClass]="{ 'btn-get-a-demo-active': !submitting }"
+          (click)="handleGetDemo()"
+        >
+          <div class="mx-4">
+            {{ submitting ? "Submitting" : "Get a demo" }}
+          </div>
+          <div class="spinner-border text-secondary" role="status"></div>
+        </button>
+      </div>
     </form>
   </div>
 </div>

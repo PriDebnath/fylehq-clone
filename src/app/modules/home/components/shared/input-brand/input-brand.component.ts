@@ -25,6 +25,6 @@ export class InputBrandComponent implements AfterContentChecked {
   ngAfterContentChecked(): void {}
 
   handleInput(event: Event) {
-    this.inputOutput.emit(event);
+    this.inputOutput.emit(this.inputValue);
   }
 }

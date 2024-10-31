@@ -1,84 +1,114 @@
 <div class="d-flex">
   <div class="w-50"><img src="/assets/images/get-a-demo-modal-left.png" /></div>
   <div
-    class="w-50 d-flex flex-column justify-content-between"
+    class="w-50 d-flex flex-column"
+    [ngClass]="
+      thankyouPage ? 'justify-content-center' : 'justify-content-between'
+    "
     style="padding: 2rem"
   >
-    <div class="get-a-demo-header d-flex justify-content-between">
-      <h3
-        class="color-brand-black font-size-20px font-weight-500 line-height-1-4"
+    <ng-container *ngIf="!thankyouPage; else thankyouPageTemplate">
+      <div class="get-a-demo-header d-flex justify-content-between">
+        <h3
+          class="color-brand-black font-size-20px font-weight-500 line-height-1-4"
+        >
+          Talk to a Fyle Specialist
+        </h3>
+        <div
+          class="color-brand-grey font-size-24px font-weight-600 cursor-pointer"
+          (click)="closeModal()"
+        >
+          &times;
+        </div>
+      </div>
+      <form
+        action=""
+        class="w-100 d-flex flex-column justify-content-between"
+        style="flex: 1"
       >
-        Talk to a Fyle Specialist
-      </h3>
-      <div
-        class="color-brand-grey font-size-24px font-weight-600 cursor-pointer"
-        (click)="closeModal()"
-      >
-        &times;
-      </div>
-    </div>
-    <form
-      action=""
-      class="w-100 d-flex flex-column justify-content-between"
-      style="flex: 1"
-    >
-      <div class="py-2">
-        <app-input-brand
-          labelText="Work email*"
-          invalidText="Please enter a valid work email address."
-          (inputOutput)="handleInputOutput($event, 'work_email')"
-        ></app-input-brand>
-      </div>
-      <div class="py-2">
-        <app-input-brand
-          labelText="Full name*"
-          invalidText="This is required."
-          (inputOutput)="handleInputOutput($event, 'full_name')"
-        ></app-input-brand>
-      </div>
-      <div class="py-2">
-        <app-input-brand
-          labelText="Phone number*"
-          invalidText="This is required."
-          (inputOutput)="handleInputOutput($event, 'phone_number')"
-        ></app-input-brand>
-      </div>
+        <div class="py-2">
+          <app-input-brand
+            labelText="Work email*"
+            [invalid]="formTouched && !form.work_email"
+            invalidText="Please enter a valid work email address."
+            (inputOutput)="handleInputOutput($event, 'work_email')"
+          ></app-input-brand>
+        </div>
+        <div class="py-2">
+          <app-input-brand
+            labelText="Full name*"
+            [invalid]="formTouched && !form.full_name"
+            invalidText="This is required."
+            (inputOutput)="handleInputOutput($event, 'full_name')"
+          ></app-input-brand>
+        </div>
+        <div class="py-2">
+          <app-input-brand
+            labelText="Phone number*"
+            invalidText="This is required."
+            [invalid]="formTouched && !form.phone_number"
+            (inputOutput)="handleInputOutput($event, 'phone_number')"
+          ></app-input-brand>
+        </div>
 
-      <div class="my-3">
-        <nz-select nzPlaceHolder="Select company size*" class="w-100">
-          @for(item of selectCompanySize;track item ){
-          <nz-option [nzValue]="item" [nzLabel]="item"></nz-option>
-          }
-        </nz-select>
-      </div>
-      <div class="py-2">
-        <label nz-checkbox [(ngModel)]="policy" class="color-brand-grey"
-          >I agree with Fyle's
-          <a
-            class="color-brand-grey-hover-brand-pink"
-            href="https://www.fylehq.com/privacy/terms-and-conditions"
-            style="text-decoration: underline"
+        <div class="my-3">
+          <nz-select nzPlaceHolder="Select company size*" class="w-100">
+            @for(item of selectCompanySize;track item ){
+            <nz-option [nzValue]="item" [nzLabel]="item"></nz-option>
+            }
+          </nz-select>
+        </div>
+        <div class="py-2">
+          <label
+            nz-checkbox
+            [(ngModel)]="policy"
+            [ngModelOptions]="{ standalone: true }"
+            class="color-brand-grey"
+            >I agree with Fyle's
+            <a
+              class="color-brand-grey-hover-brand-pink"
+              href="https://www.fylehq.com/privacy/terms-and-conditions"
+              style="text-decoration: underline"
+            >
+              terms and conditions</a
+            >
+            , and provide consent to communication from the team.</label
           >
-            terms and conditions</a
+        </div>
+        <div class="pt-2">
+          <button
+            nz-button
+            nzType="default"
+            class="btn-get-a-demo mt-3 d-flex justify-content-center"
+            style="width: 100% !important"
+            [ngClass]="{ 'btn-get-a-demo-active': !submitting }"
+            (click)="handleGetDemo()"
           >
-          , and provide consent to communication from the team.</label
+            <div class="mx-4">
+              {{ submitting ? "Submitting" : "Get a demo" }}
+            </div>
+            <div
+              *ngIf="submitting"
+              class="spinner-border text-secondary"
+              role="status"
+            ></div>
+          </button>
+        </div>
+      </form>
+    </ng-container>
+    <ng-template #thankyouPageTemplate>
+      <div class="w-50"><img src="/assets/images/thank-you.webp" /></div>
+      <div>
+        <h3
+          class="color-brand-black font-size-20px font-weight-500 line-height-1-4 mt-3"
         >
+          Thank you for your interest in Fyle!
+        </h3>
+        <div class="color-brand-grey">
+          Our sales team will contact you within the next 40 minutes to schedule
+          a detailed demo.
+        </div>
       </div>
-      <div class="pt-2">
-        <button
-          nz-button
-          nzType="default"
-          class="btn-get-a-demo mt-3 d-flex"
-          style="width: 100% !important"
-          [ngClass]="{ 'btn-get-a-demo-active': !submitting }"
-          (click)="handleGetDemo()"
-        >
-          <div class="mx-4">
-            {{ submitting ? "Submitting" : "Get a demo" }}
-          </div>
-          <div class="spinner-border text-secondary" role="status"></div>
-        </button>
-      </div>
-    </form>
+    </ng-template>
   </div>
 </div>

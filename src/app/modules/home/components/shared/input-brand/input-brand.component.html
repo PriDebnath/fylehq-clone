@@ -5,11 +5,12 @@
     placeholder=""
     [(ngModel)]="inputValue"
     (input)="handleInput($event)"
+    [ngModelOptions]="{ standalone: true }"
   />
   <label id="label" for="input">{{ labelText }}</label>
 </div>
 <div
-  *ngIf="inputField.touched && !inputValue"
+  *ngIf="(inputField.touched && !inputValue) || invalid"
   style="font-size: 0.5rem; color: red"
 >
   {{ invalidText }}

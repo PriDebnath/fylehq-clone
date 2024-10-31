@@ -1,6 +1,9 @@
 import { AfterContentInit, Component, ViewChild } from '@angular/core';
 interface GetADemoFormField {
-  work_email: string;
+  work_email?: string;
+  full_name?: string;
+  phone_number?: string;
+  // policy?: boolean;
 }
 @Component({
   selector: 'app-get-a-demo-modal',
@@ -13,9 +16,13 @@ export class GetADemoModalComponent implements AfterContentInit {
   value: any;
   @ViewChild('input') input: any;
   invalid: any;
-  form = {
+  form: GetADemoFormField = {
     work_email: '',
+    full_name: '',
+    phone_number: '',
+    // policy: undefined,
   };
+  formTouched: boolean = false;
   selectCompanySize = [
     'Under 5',
     '6 to 25',
@@ -34,18 +41,40 @@ export class GetADemoModalComponent implements AfterContentInit {
   }
 
   handleInputOutput(
-    e: Event,
+    value: string,
     field_name: 'work_email' | 'full_name' | 'phone_number'
   ) {
-    console.log({ e });
+    this.formTouched = true;
+    this.form = {
+      [field_name]: value,
+    };
   }
 
   closeModal() {}
+
   handleGetDemo() {
+    this.formTouched = true;
+    if (this.isFormValid(this.form)) {
+      return;
+    }
+
     this.submitting = true;
 
     setTimeout(() => {
       this.thankyouPage = true;
     }, 2000);
+  }
+
+  isFormValid(form: GetADemoFormField): boolean {
+    let result = false;
+    for (let key in form) {
+      console.log(form[key as keyof GetADemoFormField]);
+      if (!form[key as keyof GetADemoFormField]) {
+        result = true;
+      }
+    }
+    console.log({ result });
+
+    return result;
   }
 }

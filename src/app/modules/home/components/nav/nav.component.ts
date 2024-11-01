@@ -15,16 +15,16 @@ import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-mo
   styleUrl: './nav.component.css',
 })
 export class NavComponent implements OnInit {
-  constructor(public nzModalService: NzModalService) {}
   svg = svg;
   showInfo: boolean = true;
   activeDropdownMenu: string = '';
 
   @Output() changeNavShowInfo = new EventEmitter();
 
-  ngOnInit(): void {
-    this.handleGetDemo();
-  }
+  constructor(public nzModalService: NzModalService) {}
+
+  ngOnInit(): void {}
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     console.log(window.scrollY);

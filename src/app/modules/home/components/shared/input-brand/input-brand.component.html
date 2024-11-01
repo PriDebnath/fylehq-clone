@@ -10,7 +10,7 @@
   <label id="label" for="input">{{ labelText }}</label>
 </div>
 <div
-  *ngIf="(inputField.touched && !inputValue) || invalid"
+  *ngIf="(inputField.touched && !inputValue) || (invalid && !inputValue)"
   style="font-size: 0.5rem; color: red"
 >
   {{ invalidText }}

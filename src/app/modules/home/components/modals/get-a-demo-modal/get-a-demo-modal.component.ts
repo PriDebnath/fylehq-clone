@@ -1,9 +1,10 @@
 import { AfterContentInit, Component, ViewChild } from '@angular/core';
+import { NzModalRef } from 'ng-zorro-antd/modal';
 interface GetADemoFormField {
   work_email?: string;
   full_name?: string;
   phone_number?: string;
-  // policy?: boolean;
+  policy?: boolean;
 }
 @Component({
   selector: 'app-get-a-demo-modal',
@@ -11,17 +12,17 @@ interface GetADemoFormField {
   styleUrl: './get-a-demo-modal.component.css',
 })
 export class GetADemoModalComponent implements AfterContentInit {
-  submitting = false;
-  thankyouPage = false;
-  value: any;
-  @ViewChild('input') input: any;
-  invalid: any;
+  submitting: boolean = false;
+  thankyouPage: boolean = false;
+  policy: boolean = false;
+
   form: GetADemoFormField = {
     work_email: '',
     full_name: '',
     phone_number: '',
-    // policy: undefined,
+    policy: undefined,
   };
+
   formTouched: boolean = false;
   selectCompanySize = [
     'Under 5',
@@ -32,13 +33,10 @@ export class GetADemoModalComponent implements AfterContentInit {
     '501 to 1000',
     'More than 1000',
   ];
-  policy: boolean = false;
-  showInfo: any;
-  ngAfterContentInit(): void {
-    setTimeout(() => {
-      console.log(this.input);
-    }, 1000);
-  }
+
+  constructor(private nzModalRef: NzModalRef) {}
+
+  ngAfterContentInit(): void {}
 
   handleInputOutput(
     value: string,
@@ -50,7 +48,9 @@ export class GetADemoModalComponent implements AfterContentInit {
     };
   }
 
-  closeModal() {}
+  closeModal() {
+    this.nzModalRef.close();
+  }
 
   handleGetDemo() {
     this.formTouched = true;
@@ -59,7 +59,6 @@ export class GetADemoModalComponent implements AfterContentInit {
     }
 
     this.submitting = true;
-
     setTimeout(() => {
       this.thankyouPage = true;
     }, 2000);
@@ -68,13 +67,10 @@ export class GetADemoModalComponent implements AfterContentInit {
   isFormValid(form: GetADemoFormField): boolean {
     let result = false;
     for (let key in form) {
-      console.log(form[key as keyof GetADemoFormField]);
       if (!form[key as keyof GetADemoFormField]) {
         result = true;
       }
     }
-    console.log({ result });
-
     return result;
   }
 }

@@ -39,7 +39,8 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/less/input.less",
               "src/assets/css/less/output.css",
-              "src/assets/css/styles.css"
+              "src/assets/css/styles.css",
+              "src/assets/css/utility.css"
             ],
             "scripts": []
           },

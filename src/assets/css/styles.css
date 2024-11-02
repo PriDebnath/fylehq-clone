@@ -161,16 +161,24 @@ img {
 }
 
 .brand-container {
-  width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) {
+  .brand-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
   .brand-container {
     width: 1140px;
   }
 }
 
-@media (max-width: 960px) {
+@media (min-width: 960px) {
   .brand-container {
     width: 920px;
   }
@@ -295,4 +303,16 @@ img {
 
 .hover-underline:hover {
   text-decoration: underline !important;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

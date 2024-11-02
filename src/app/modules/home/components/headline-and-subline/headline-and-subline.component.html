@@ -4,6 +4,7 @@
     {{ subline }}
   </h2>
   <app-link-with-right-arrow
+    *ngIf="link"
     [link]="link"
     [linkText]="linkText"
   ></app-link-with-right-arrow>

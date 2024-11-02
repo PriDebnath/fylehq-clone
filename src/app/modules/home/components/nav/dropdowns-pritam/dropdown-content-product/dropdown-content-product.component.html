@@ -1,4 +1,4 @@
-<div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
+<!-- <div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
   <h3
     class="font-weight-400 font-size-14px color-brand-grey"
     style="margin-bottom: 25px"
@@ -6,7 +6,6 @@
     FEATURES
   </h3>
   <div class="row">
-    <!-- Col 1 -->
     <div class="col">
       <div>
         <app-nav-feature-card
@@ -42,7 +41,6 @@
         </app-nav-feature-card>
       </div>
     </div>
-    <!-- Col 2 -->
     <div class="col">
       <div>
         <app-nav-feature-card
@@ -112,7 +110,6 @@
         </a>
       </ul>
     </div>
-    <!-- Col 3 -->
     <div class="col">
       <div>
         <app-nav-feature-card
@@ -218,7 +215,6 @@
         </a>
       </div>
     </div>
-    <!-- Col 4 -->
     <div class="col">
       <div>
         <app-nav-feature-card
@@ -287,6 +283,85 @@
           </svg>
         </span>
       </a>
+    </div>
+  </div>
+</div> -->
+<div class="brand-container bg-white m-auto" style="padding: 30px 0 25px">
+  <h3 class="font-weight-400 font-size-14px color-brand-grey" style="margin-bottom: 25px">
+    FEATURES
+  </h3>
+  <div class="row">
+    <!-- Column 1 -->
+    <div class="col">
+      <div>
+        <app-nav-feature-card
+          *ngFor="let card of cardData.col1"
+          [svg]="card.svg"
+          [redirectTo]="card.redirectTo"
+          [headline]="card.headline"
+          [subline]="card.subline">
+        </app-nav-feature-card>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col">
+      <div>
+        <app-nav-feature-card
+          *ngFor="let card of cardData.col2"
+          [svg]="card.svg"
+          [redirectTo]="card.redirectTo"
+          [headline]="card.headline"
+          [subline]="card.subline">
+        </app-nav-feature-card>
+      </div>
+      <ul class="px-2" style="margin-left: 61px">
+        <ng-container *ngFor="let item of listData.col2">
+          <a [href]="item.link">
+            <li class="color-brand-black-hover-brand-blue font-size-14px font-weight-400 line-height-2 list-style-initial">
+              {{ item.text }}
+            </li>
+          </a>
+        </ng-container>
+        <!-- Additional static items -->
+        <li class="mt-3 color-brand-black-hover-brand-blue font-size-14px font-weight-400 line-height-2">
+          Virtual Cards
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 3 (for Integrations) -->
+    <div class="col">
+      <div>
+        <app-nav-feature-card
+          [svg]="svg.integrations"
+          redirectTo="https://www.fylehq.com/product/integrations"
+          headline="Integrations"
+          subline="Sync with your accounting software, HRMS and more">
+        </app-nav-feature-card>
+      </div>
+      <ul class="px-2" style="margin-left: 61px">
+        <ng-container *ngFor="let item of listData.col3">
+          <a [href]="item.link">
+            <li class="color-brand-black-hover-brand-blue font-size-14px font-weight-400 line-height-2 list-style-initial">
+              {{ item.text }}
+            </li>
+          </a>
+        </ng-container>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="col">
+      <div>
+        <app-nav-feature-card
+          *ngFor="let card of cardData.col4"
+          [svg]="card.svg"
+          [redirectTo]="card.redirectTo"
+          [headline]="card.headline"
+          [subline]="card.subline">
+        </app-nav-feature-card>
+      </div>
     </div>
   </div>
 </div>

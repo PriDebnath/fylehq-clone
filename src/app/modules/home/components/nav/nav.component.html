@@ -3,7 +3,7 @@
   <div
     *ngIf="showInfo"
     id="nav-info"
-    class="position-fixed d-flex justify-content-center brand-p-10px bg-brand-blue"
+    class="position-fixed d-flex d-none d-sm-inherit justify-content-center brand-p-10px bg-brand-blue"
     style="height: 44px; top: 0; left: 0; right: 0"
   >
     <div
@@ -108,7 +108,10 @@
     }"
     [ngStyle]="{ top: showInfo ? '44px' : '0px' }"
   >
-    <div class="brand-container d-flex align-items-center">
+    <div
+      class="brand-container d-flex justify-content-between align-items-center"
+      style="height: 80px"
+    >
       <div class="nav-start logo-container">
         <span id="fyle-logo">
           <svg
@@ -171,7 +174,8 @@
           </svg>
         </span>
       </div>
-      <div class="w-100 d-flex justify-content-between">
+      <!-- Desktop nav link start -->
+      <div class="w-100 d-flex justify-content-between d-none d-sm-inherit">
         <ul class="nav-mid d-flex" style="height: 80px">
           <li
             class="nav-link"
@@ -225,15 +229,67 @@
           </button>
         </div>
       </div>
+      <!-- Desktop nav link end -->
+      <!-- Mobile Hamburger menu start -->
+      <div (click)="mobileMenu = !mobileMenu">
+        <span *ngIf="!mobileMenu">
+          <svg
+            id="mobile-hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          >
+            <defs>
+              <path
+                id="a"
+                d="M19 11H1a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2zm0-7H1a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2zm0 14H1a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2z"
+              />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <mask id="b" fill="#fff">
+                <use xlink:href="#a" />
+              </mask>
+              <use fill="#31373D" xlink:href="#a" />
+              <g fill="#31373D" mask="url(#b)">
+                <path d="M0 0h21v21H0z" />
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span *ngIf="mobileMenu">
+          <svg
+            id="mobile-cross"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          >
+            <defs>
+              <path
+                id="a"
+                d="M11.414 10l6.293-6.293a.999.999 0 1 0-1.414-1.414L10 8.586 3.707 2.293a.999.999 0 1 0-1.414 1.414L8.586 10l-6.293 6.293a.999.999 0 1 0 1.414 1.414L10 11.414l6.293 6.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z"
+              />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <mask id="b" fill="#fff">
+                <use xlink:href="#a" />
+              </mask>
+              <use fill="#31373D" xlink:href="#a" />
+              <g fill="#31373D" mask="url(#b)">
+                <path d="M0 0h21v21H0z" />
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+      <!-- Mobile Hamburger menu start -->
     </div>
-    <!--  -->
   </div>
 </nav>
-<!--  dropdown contents start -->
-<!-- <nz-dropdown-menu
-    #menuProduct="nzDropdownMenu"
-    style="padding: 1rem !important; background-color: magenta !important"
-  > -->
+
 <div
   nz-menu
   nzSelectable
@@ -259,5 +315,12 @@
     *ngIf="activeDropdownMenu == 'Resources'"
   ></app-dropdown-content-resources>
 </div>
-<!-- </nz-dropdown-menu> -->
-<!--  dropdown contents end -->
+
+<div *ngIf="mobileMenu">
+  <div
+    class="position-fixed d-flex justify-content-center brand-p-10px bg-brand-blue fade-in"
+    style="height: calc(100vh - 44px); top: 80px; left: 0; right: 0; z-index: 1"
+  >
+    yoo
+  </div>
+</div>

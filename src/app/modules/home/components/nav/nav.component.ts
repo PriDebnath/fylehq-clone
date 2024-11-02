@@ -17,13 +17,18 @@ import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-mo
 export class NavComponent implements OnInit {
   svg = svg;
   showInfo: boolean = true;
+  mobileMenu: boolean = false;
+  isMobile: boolean = false;
+
   activeDropdownMenu: string = '';
 
   @Output() changeNavShowInfo = new EventEmitter();
 
   constructor(public nzModalService: NzModalService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.checkScreenSize();
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -35,7 +40,17 @@ export class NavComponent implements OnInit {
     }
     // this.changeNavShowInfo.emit(this.showInfo);
   }
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
 
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768; // Adjust the width as per your mobile breakpoint
+    if (this.isMobile) {
+      this.showInfo = false;
+    }
+  }
   handleNavLinkMouseover(event: any) {
     this.activeDropdownMenu = event;
     console.log(event);

@@ -1,0 +1,14 @@
+/* .d-sm-none {
+  display: none !important;
+}
+
+ @media (max-width: 575.98px) {
+  .d-sm-none {
+    display: inherit;
+  }
+} */
+@media (min-width: 580px) {
+  .d-sm-inherit {
+    display: inherit !important;
+  }
+}

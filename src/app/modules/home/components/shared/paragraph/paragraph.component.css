@@ -1,0 +1,18 @@
+.para {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px !important;
+  line-height: 1.4 !important;
+}
+
+.paragraph h4 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: var(--brand-black);
+}
+
+.paragraph p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: var(--brand-grey);
+}

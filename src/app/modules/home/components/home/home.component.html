@@ -11,6 +11,89 @@
         headline="Tired of chasing employees for expense receipts and manually matching credit card expenses?"
         subline="Stop dealing with shoeboxes of receipts and tedious spreadsheets. Fyle helps you collect receipts 5X faster via text messages, codes expenses automatically, matches them to the right transactions, and exports them to your accounting system, giving you the shortest time to close."
       ></app-headline-and-subline>
+      <!-- Current way vs Fyle way -start -->
+      <div class="d-flex flex-xl-row flex-column justify-content-between">
+        <div class="col-11 col-xl-6 blue-white-gradient-bg">
+          <h3
+            class="color-brand-black font-size-24px font-weight-500 line-height-1-4 py-4 text-center"
+          >
+            The current Way
+          </h3>
+          <img src="/assets/images/the-old-way-homepage-updated.webp" />
+        </div>
+        <div class="col-11 col-xl-6 blue-white-gradient-bg ms-3">
+          <h3
+            class="color-brand-black font-size-24px font-weight-500 line-height-1-4 py-4 text-center"
+          >
+            The Fyle Way
+          </h3>
+          <img src="/assets/images/fyle-way.png" />
+        </div>
+      </div>
+      <!-- Current way vs Fyle way -end-->
+      <div class="my-4 py-4">
+        <app-headline-and-subline
+          [containerStyle]="{ padding: '0 15px' }"
+          [containerClass]="{ 'text-center': true }"
+          headline="The best expense management app to track your receipts"
+          subline="Simplify tracking receipts and submit expense reports from apps employees use everyday. Submit receipts and expenses right from Gmail, Outlook, Slack, or Fyle’s easy to use mobile app."
+          link="https://www.fylehq.com/expense-receipt-tracking"
+          linkText=" Explore Fyle’s expense tracking features "
+        ></app-headline-and-subline>
+      </div>
+
+      <div class="row">
+        <div class="col col-12 col-md-6">
+          <app-paragraph
+            [paragraphHeader]="'Track expenses on-the-go via text'"
+            paragraphBody="    Users can just text us a picture of their receipt, Fyle’s OCR automatically extracts data like Merchant, Date, Amount and Category, eliminating manual effort."
+          ></app-paragraph>
+          <br />
+          <br />
+          <app-paragraph
+            [paragraphHeader]="'Let Fyle’s AI code the expense'"
+            paragraphBody="Fyle’s AI prompts users for additional expense data like Projects, Cost Codes, and Memos via text. It codes expenses according to your GL, freeing you from unnecessary follow ups."
+          ></app-paragraph>
+          <!-- Tick list start -->
+          <div class="py-3">
+            @for (item of tickList; track item;let last = $last) {
+            <div class="d-flex py-2">
+              <div
+                class="position-relative"
+                [ngClass]="!last ? 'tick-icon-wrapper' : ''"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                >
+                  <g fill="#4461D7" fill-rule="evenodd">
+                    <circle cx="10" cy="10" r="10" opacity=".1" />
+                    <path
+                      d="M12.697,6.138 L8.012,11.477 L6.45,9.915 C6.072,9.537 5.461,9.537 5.083,9.915 C4.706,10.293 4.706,10.904 5.083,11.281 L7.383,13.581 C7.566,13.765 7.814,13.864 8.096,13.8630075 C8.372,13.853 8.625,13.73 8.8,13.525 L14.163,7.395 C14.512,6.99 14.465,6.38 14.059,6.033 C13.655,5.685 13.045,5.733 12.697,6.138 L12.697,6.138 Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="mx-3 color-brand-grey">{{ item }}</p>
+            </div>
+            }
+          </div>
+          <!-- Tick list end -->
+          <div>
+            <app-link-with-right-arrow
+              [linkText]="'Learn more'"
+              [link]="
+                'https://www.fylehq.com/product/conversational-ai-for-expenses'
+              "
+            ></app-link-with-right-arrow>
+          </div>
+        </div>
+        <div class="col col-12 col-md-6">
+          <div><img src="/assets/images/current-way.png" /></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

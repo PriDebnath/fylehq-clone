@@ -10,4 +10,6 @@ export class HeadlineAndSublineComponent {
   @Input() containerStyle?: { [key: string]: string };
   @Input() headline: string = 'headline';
   @Input() subline: string = 'subline';
+  @Input() link: string = '';
+  @Input() linkText: string = '';
 }

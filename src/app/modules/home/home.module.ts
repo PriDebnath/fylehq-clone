@@ -16,6 +16,8 @@ import { NavBlogCardComponent } from './components/nav/nav-blog-card/nav-blog-ca
 import { GetADemoModalComponent } from './components/modals/get-a-demo-modal/get-a-demo-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputBrandComponent } from './components/shared/input-brand/input-brand.component';
+import { ParagraphComponent } from './components/shared/paragraph/paragraph.component';
+import { LinkWithRightArrowComponent } from './components/shared/link-with-right-arrow/link-with-right-arrow.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { InputBrandComponent } from './components/shared/input-brand/input-brand
     NavBlogCardComponent,
     GetADemoModalComponent,
     InputBrandComponent,
+    ParagraphComponent,
+    LinkWithRightArrowComponent,
   ],
   imports: [
     CommonModule,

@@ -12,6 +12,11 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, AfterContentChecked {
+  tickList: string[] = [
+    'No learning curve for employees',
+    'Collect receipts 5X faster',
+    'Automated AI-based coding',
+  ];
   showNavInfo: boolean = true;
   pageTitle: string = 'Fyle | Intelligent Expense Management Software';
   constructor(private title: Title) {}

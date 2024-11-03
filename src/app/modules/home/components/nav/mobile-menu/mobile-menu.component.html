@@ -1,0 +1,8 @@
+<p>mobile-menu works!</p>
+<nz-collapse [nzBordered]="false" class="w-100">
+  @for (panel of menu; track panel) {
+  <nz-collapse-panel [nzHeader]="panel.label" [nzActive]="panel.active">
+    <p>{{ panel.label }} content</p>
+  </nz-collapse-panel>
+  }
+</nz-collapse>

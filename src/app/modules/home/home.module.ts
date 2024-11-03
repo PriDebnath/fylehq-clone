@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputBrandComponent } from './components/shared/input-brand/input-brand.component';
 import { ParagraphComponent } from './components/shared/paragraph/paragraph.component';
 import { LinkWithRightArrowComponent } from './components/shared/link-with-right-arrow/link-with-right-arrow.component';
+import { MobileMenuComponent } from './components/nav/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LinkWithRightArrowComponent } from './components/shared/link-with-right
     InputBrandComponent,
     ParagraphComponent,
     LinkWithRightArrowComponent,
+    MobileMenuComponent,
   ],
   imports: [
     CommonModule,

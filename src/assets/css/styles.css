@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --brand-pink: rgb(255, 51, 102);
+  --brand-pink: #ff3366;
   --brand-blue: #2172e8;
   --brand-yellow: #ffd954;
-  --brand-black: rgb(45, 49, 66);
+  --brand-black: #2d3142;
   --brand-grey: #6f718f;
 }
 
@@ -229,12 +229,24 @@ img {
   color: var(--brand-black);
 }
 
+@media (min-width: 900px) {
+  .headline {
+    font-size: 24px;
+  }
+}
+
 .subline {
   color: var(--brand-grey);
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.4px !important;
   line-height: 1.4 !important;
+}
+
+@media (min-width: 900px) {
+  .subline {
+    font-size: 1rem;
+  }
 }
 
 /* LINE */
@@ -255,6 +267,12 @@ img {
   background-color: #e6ecef;
   height: 1px;
   margin: 20px 0;
+}
+
+.blue-pritam {
+  background-image: linear-gradient(270deg, #d5e2e9 102%, #eaeef1 0);
+  height: 2px;
+  opacity: 0.5;
 }
 
 .link-with-right-arrow {
@@ -291,6 +309,26 @@ img {
 .btn-get-a-demo-active {
   background-color: var(--brand-pink) !important;
   color: white !important;
+}
+
+.btn-big-get-a-demo {
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  height: 52px !important;
+  padding: 10px 16px 8px;
+  font-size: 1rem !important;
+  border: 2px solid var(--brand-pink) !important;
+  background-color: var(--brand-pink) !important;
+  color: white !important;
+  font-size: 18px;
+  opacity: 0.9;
+  padding: 10px 16px 8px;
+  width: 360px;
+}
+
+.btn-big-get-a-demo:hover {
+  background-color: var(--brand-pink) !important;
+  opacity: 1;
 }
 
 .right-arrow {

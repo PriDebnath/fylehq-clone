@@ -12,24 +12,13 @@ header h2 {
   line-height: 1.4 !important;
 }
 
-.btn-big-get-a-demo {
-  border-radius: 6px !important;
-  font-weight: 700 !important;
-  height: 52px !important;
-  padding: 10px 16px 8px;
-  font-size: 1rem !important;
-  border: 2px solid var(--brand-pink) !important;
-  background-color: var(--brand-pink) !important;
-  color: white !important;
-  font-size: 18px;
-  opacity: 0.9;
-  padding: 10px 16px 8px;
-  width: 360px;
-}
-
-.btn-big-get-a-demo:hover {
-  background-color: var(--brand-pink) !important;
-  opacity: 1;
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 30px;
+  }
+  header h2 {
+    font-size: 18px;
+  }
 }
 
 .header-img-container {

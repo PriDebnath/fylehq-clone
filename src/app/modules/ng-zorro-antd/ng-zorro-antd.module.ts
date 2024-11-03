@@ -5,6 +5,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 
 @NgModule({
   declarations: [],
@@ -15,13 +16,15 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
     NzSelectModule,
     NzDropDownModule,
     NzCheckboxModule,
+    NzCollapseModule,
   ],
   exports: [
+    NzModalModule,
     NzButtonModule,
     NzSelectModule,
-    NzModalModule,
     NzDropDownModule,
     NzCheckboxModule,
+    NzCollapseModule,
   ],
 })
 export class NgZorroAntdModule {}

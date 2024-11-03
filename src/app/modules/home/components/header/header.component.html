@@ -1,9 +1,11 @@
 <header class="d-flex header-bg justify-content-center">
   <div class="brand-container">
     <div class="d-flex align-items-center" style="padding: 2rem 0 6rem 0">
-      <div style="width: calc(100% - 2rem); padding: 0 2rem 0 0">
-        <h1 class="color-brand-black">Expense Management That SMBs Deserve</h1>
-        <h2 class="color-brand-grey pb-4">
+      <div style="width: calc(100% - 2rem)">
+        <h1 class="color-brand-black text-center text-md-left">
+          Expense Management That SMBs Deserve
+        </h1>
+        <h2 class="color-brand-grey text-center text-md-left pb-4">
           Optimize your expense management with automation, real-time spend
           tracking, and hassle-free receipt capture via text messages—all on
           your existing credit cards.
@@ -12,14 +14,17 @@
           <button
             nz-button
             nzType="default"
-            class="btn-big-get-a-demo"
+            class="btn-big-get-a-demo d-none d-sm-inherit"
             (click)="handleGetDemo()"
           >
             Get a demo
           </button>
         </div>
       </div>
-      <div class="header-img-container d-none d-sm-inherit">
+      <div
+        class="header-img-container d-none d-sm-inherit"
+        style="padding: 0 0rem 0 2rem"
+      >
         <img
           class="fade-in-img"
           src="../../../../../assets/images/homepage-hero-sep-2024.gif"
@@ -40,4 +45,5 @@
       title="/src/assets/images/cutomers-logos-2row.webp"
     />
   </div>
+
 </section>

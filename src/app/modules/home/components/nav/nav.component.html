@@ -315,12 +315,42 @@
     *ngIf="activeDropdownMenu == 'Resources'"
   ></app-dropdown-content-resources>
 </div>
-
+<!-- Mobile menu -->
 <div *ngIf="mobileMenu">
   <div
-    class="position-fixed d-flex justify-content-center brand-p-10px bg-brand-blue fade-in"
-    style="height: calc(100vh - 44px); top: 80px; left: 0; right: 0; z-index: 1"
+    class="position-fixed d-flex justify-content-center brand-p-10px fade-in"
+    style="
+      height: calc(100vh - 44px);
+      width: 100%;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    "
   >
-    yoo
+    <app-mobile-menu style="width: 100%"></app-mobile-menu>
   </div>
+</div>
+
+<!-- Mobile fixed get demo button -->
+<div
+  *ngIf="!mobileMenu"
+  class="position-fixed d-flex justify-content-center d-sm-none"
+  style="
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--brand-black);
+    padding: 20px 30px;
+  "
+>
+  <button
+    nz-button
+    nzType="default"
+    class="btn-big-get-a-demo"
+    (click)="handleGetDemo()"
+  >
+    Get a demo
+  </button>
 </div>

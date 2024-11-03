@@ -8,7 +8,7 @@ import { svg } from '../../svg';
 })
 export class DropdownContentProductComponent {
   svg = svg;
-  cardData = {
+  public cardData = {
     col1: [
       {
         svg: this.svg.svg_text_messages,

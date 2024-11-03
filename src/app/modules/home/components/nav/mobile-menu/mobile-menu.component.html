@@ -1,8 +1,78 @@
-<p>mobile-menu works!</p>
-<nz-collapse [nzBordered]="false" class="w-100">
-  @for (panel of menu; track panel) {
-  <nz-collapse-panel [nzHeader]="panel.label" [nzActive]="panel.active">
-    <p>{{ panel.label }} content</p>
+<nz-collapse [nzBordered]="false" class="w-100" [nzExpandIconPosition]="'end'">
+  @for (m of menu; track m) {
+  <nz-collapse-panel
+    #p
+    [nzHeader]="m.label"
+    [nzActive]="m.active"
+    [nzExpandedIcon]="expandedIcon"
+  >
+    <ng-template #expandedIcon let-active>
+      <span nz-icon nzType="caret-right" class="ant-collapse-arrow">
+        <span>
+          <svg
+            [ngClass]="p.nzActive ? 'rotate-180' : 'rotate-0'"
+            width="14"
+            height="8"
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.00029 8.00029C6.70162 8.00029 6.40296 7.88829 6.17546 7.66543L0.342125 1.95114C-0.114042 1.50429 -0.114042 0.782 0.342125 0.335143C0.798292 -0.111714 1.53562 -0.111714 1.99179 0.335143L7.00029 5.24143L12.0088 0.335143C12.465 -0.111714 13.2023 -0.111714 13.6585 0.335143C14.1146 0.782 14.1146 1.50429 13.6585 1.95114L7.82512 7.66543C7.59762 7.88829 7.29896 8.00029 7.00029 8.00029Z"
+              fill="#6F718F"
+            />
+            <mask
+              id="mask0_1903_252"
+              style="mask-type: luminance"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="15"
+              height="9"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.00029 8.00029C6.70162 8.00029 6.40296 7.88829 6.17546 7.66543L0.342125 1.95114C-0.114042 1.50429 -0.114042 0.782 0.342125 0.335143C0.798292 -0.111714 1.53562 -0.111714 1.99179 0.335143L7.00029 5.24143L12.0088 0.335143C12.465 -0.111714 13.2023 -0.111714 13.6585 0.335143C14.1146 0.782 14.1146 1.50429 13.6585 1.95114L7.82512 7.66543C7.59762 7.88829 7.29896 8.00029 7.00029 8.00029Z"
+                fill="white"
+              />
+            </mask>
+            <g mask="url(#mask0_1903_252)"></g>
+          </svg>
+        </span>
+      </span>
+    </ng-template>
+
+    @if (m.label == menu[0].label || m.label == 'Products'){
+    <div class="c">
+      @for (item of col1; track item) { @if (item.headline == col1[4].headline
+      || item.headline == 'Cards') {
+
+      <p class="color-brand-grey">{{ item.headline }}</p>
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        Visa
+      </li>
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        Mastercard
+      </li>
+      } @else if (item.headline == col1[5].headline || item.headline ==
+      'Integrations') {
+
+      <p class="pb-4 color-brand-grey">{{ item.headline }}</p>
+      }@else{
+      <p class="pb-4 color-brand-grey">{{ item.headline }}</p>
+
+      } }
+    </div>
+    }
   </nz-collapse-panel>
+  <div class="blue-pritam"></div>
+
   }
 </nz-collapse>

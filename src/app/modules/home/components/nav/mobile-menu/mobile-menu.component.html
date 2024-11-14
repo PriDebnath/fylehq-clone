@@ -45,32 +45,184 @@
       </span>
     </ng-template>
 
-    @if (m.label == menu[0].label || m.label == 'Products'){
     <div class="c">
-      @for (item of col1; track item) { @if (item.headline == col1[4].headline
-      || item.headline == 'Cards') {
+      @if (m.label == menu[0].label || m.label == 'Products'){ @for (item of
+      col1; track item) { @if (item.headline == col1[4].headline ||
+      item.headline == 'Cards') {
+      <div class="pb-4">
+        <p class="color-brand-grey">
+          <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+            {{ item.headline }}
+          </a>
+        </p>
+        <li
+          class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+        >
+          <a
+            href="https://www.fylehq.com/product/cards/visa"
+            class="color-brand-grey hover-underline"
+          >
+            Visa
+          </a>
+        </li>
+        <li
+          class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+        >
+          <a
+            href="https://www.fylehq.com/product/cards/mastercard"
+            class="color-brand-grey hover-underline"
+          >
+            Mastercard
+          </a>
+        </li>
+        <li
+          class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+        >
+          <a
+            href="https://www.fylehq.com/product/cards/#american-express"
+            class="color-brand-grey hover-underline"
+          >
+            American Express
+          </a>
+        </li>
+        <li
+          class="h color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2"
+        >
+          <a
+            href="https://www.fylehq.com/product/american-express-virtual-cards"
+            class="color-brand-grey hover-underline d-flex"
+          >
+            <span style="width: 16px; display: block"></span>
+            Virtual cards
+          </a>
+        </li>
 
-      <p class="color-brand-grey">{{ item.headline }}</p>
-      <li
-        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
-      >
-        Visa
-      </li>
-      <li
-        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
-      >
-        Mastercard
-      </li>
+        <li
+          class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2"
+        >
+          <a
+            href="https://www.fylehq.com/product/american-express-virtual-cards"
+            class="color-brand-grey hover-underline d-flex"
+          >
+            <span style="width: 16px; display: block"></span>
+
+            <span>
+              <svg
+                width="4"
+                height="5"
+                viewBox="0 0 4 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="2" cy="2.92725" r="1.5" stroke="#2D3142" />
+              </svg>
+            </span>
+            <span class="px-2">American Express</span>
+          </a>
+        </li>
+      </div>
+
       } @else if (item.headline == col1[5].headline || item.headline ==
       'Integrations') {
 
-      <p class="pb-4 color-brand-grey">{{ item.headline }}</p>
-      }@else{
-      <p class="pb-4 color-brand-grey">{{ item.headline }}</p>
+      <p class="color-brand-grey">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
 
-      } }
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/netsuite-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          NetSuite
+        </a>
+      </li>
+
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/sage-intacct-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          Sage Intacct
+        </a>
+      </li>
+
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/quickbooks-online-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          QuickBooks Online
+        </a>
+      </li>
+
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/quickbooks-desktop-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          QuickBooks Desktop
+        </a>
+      </li>
+
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/sage-300-cre-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          Sage 300 CRE (Beta)
+        </a>
+      </li>
+
+      <li
+        class="color-brand-grey hover-underline font-size-14px font-weight-400 line-height-2 list-style-initial"
+      >
+        <a
+          href="https://www.fylehq.com/product/integrations/xero-accounting-software"
+          class="color-brand-grey hover-underline"
+        >
+          Xero
+        </a>
+      </li>
+      <div class="my-3">
+        <app-link-with-right-arrow
+          [linkText]="'See all'"
+          [linkColor]="'color-brand-black'"
+          [link]="
+            'https://www.fylehq.com/product/conversational-ai-for-expenses'
+          "
+        ></app-link-with-right-arrow>
+      </div>
+      }@else{
+      <p class="pb-4 color-brand-grey">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
+
+      } } }
+
+      <div class="blue-pritam"></div>
+      <div class="mt-3">
+        <app-link-with-right-arrow
+          [linkText]="'View all features'"
+          [linkColor]="'color-brand-black'"
+          [link]="'https://www.fylehq.com/product'"
+        ></app-link-with-right-arrow>
+      </div>
     </div>
-    }
   </nz-collapse-panel>
   <div class="blue-pritam"></div>
 

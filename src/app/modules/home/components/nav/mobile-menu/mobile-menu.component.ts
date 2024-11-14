@@ -16,41 +16,45 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
 
   col1 = [
     {
-      svg: this.svg.svg_text_messages,
       redirectTo:
         'https://www.fylehq.com/product/conversational-ai-for-expenses',
       headline: 'Text Messages',
-      subline: 'The biggest innovation in receipt tracking since mobiles',
     },
     {
-      svg: this.svg.receipts,
       redirectTo: 'https://www.fylehq.com/expense-receipt-tracking',
       headline: 'Receipts',
-      subline: 'Track receipts from everyday apps in a few clicks',
     },
     {
-      svg: this.svg.expenses,
       redirectTo: 'https://www.fylehq.com/product/expenses',
       headline: 'Expenses',
-      subline: 'Report expenses, mileages, per-diems and more',
     },
     {
-      svg: this.svg.approvals,
       redirectTo: 'https://www.fylehq.com/product/approvals',
       headline: 'Approvals',
-      subline: 'Set up any approval workflow and approve on-the-go',
     },
     {
-      svg: this.svg.cards,
       redirectTo: 'https://www.fylehq.com/product/cards',
       headline: 'Cards',
-      subline: 'Manage and automate credit card reconciliation',
     },
     {
-      // svg: this.svg.cards,
-      // redirectTo: 'https://www.fylehq.com/product/cards',
+      redirectTo: 'https://www.fylehq.com/product/integrations',
       headline: 'Integrations',
-      // subline: 'Manage and automate credit card reconciliation',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/product/mobile-app',
+      headline: 'Mobile App',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/product/payments',
+      headline: 'Reimbursements',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/product/analytics',
+      headline: 'Analytics',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/product/budgets',
+      headline: 'Budgets',
     },
   ];
   menu = [

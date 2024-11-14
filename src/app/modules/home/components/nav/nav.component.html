@@ -318,14 +318,16 @@
 <!-- Mobile menu -->
 <div *ngIf="mobileMenu">
   <div
-    class="position-fixed d-flex justify-content-center brand-p-10px fade-in"
+    class="position-fixed d-flex justify-content-center fade-in bg-white"
     style="
       height: calc(100vh - 44px);
       width: 100%;
-      top: 80px;
+      top: 78px;
       left: 0;
       right: 0;
       z-index: 1;
+      overflow: auto;
+      padding: 30px 30px 0 30px;
     "
   >
     <app-mobile-menu style="width: 100%"></app-mobile-menu>

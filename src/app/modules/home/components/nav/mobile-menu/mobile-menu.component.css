@@ -12,3 +12,7 @@
   border-radius: 6px;
   padding: 20px;
 }
+
+.ant-collapse-borderless > .ant-collapse-item {
+  border: none !important;
+}

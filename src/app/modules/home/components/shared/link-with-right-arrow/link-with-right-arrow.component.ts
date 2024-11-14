@@ -6,6 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './link-with-right-arrow.component.css',
 })
 export class LinkWithRightArrowComponent {
+  @Input() linkColor:
+    | 'color-brand-pink'
+    | 'color-brand-grey'
+    | 'color-brand-black' = 'color-brand-pink';
   @Input() link: string = '';
   @Input() linkText: string = '';
 }

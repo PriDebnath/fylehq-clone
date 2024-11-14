@@ -1,4 +1,8 @@
-<a [href]="link" class="color-brand-pink hover-underline pb-4">
+<a
+  [href]="link"
+  class="hover-underline pb-4"
+  [ngClass]="linkColor && linkColor"
+>
   <span class="font-weight-500 font-size-1rem">
     {{ linkText }}
   </span>
@@ -9,7 +13,7 @@
       width="8"
       height="14"
       viewBox="0 0 8 14"
-      class="right-arrow"
+      [ngClass]="linkColor && linkColor"
     >
       <defs>
         <path

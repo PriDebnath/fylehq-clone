@@ -77,10 +77,18 @@ img {
   color: var(--brand-pink) !important;
 }
 
+.color-white-hover:hover {
+  color: white !important;
+}
+
 /* BACKGROUND COLOR */
 
 .bg-brand-blue {
   background-color: var(--brand-blue) !important;
+}
+
+.hover-bg-primary:hover {
+  background-color: var(--brand-pink) !important;
 }
 
 .nav-bg,
@@ -261,6 +269,14 @@ img {
 
 .list-style-initial {
   list-style: initial !important;
+}
+
+.border-radius-6px {
+  border-radius: 6px !important;
+}
+
+.border-2px-solid-brand-pink {
+  border: 2px solid var(--brand-pink) !important;
 }
 
 .pritam {

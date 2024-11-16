@@ -9,6 +9,9 @@ import { svg } from '../svg';
   styleUrl: './mobile-menu.component.css',
 })
 export class MobileMenuComponent implements OnInit, AfterViewInit {
+  onExtraClick($event: MouseEvent) {
+    throw new Error('Method not implemented.');
+  }
   svg = svg;
 
   @ViewChild(DropdownContentProductComponent)
@@ -16,9 +19,13 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
   menu = [
     { label: 'Product', active: false },
     { label: 'Solutions', active: false },
-    { label: 'Accounting Firms', active: false },
-    { label: 'Pricing', active: false },
-    { label: 'Resources', active: true },
+    {
+      label: 'Accounting Firms',
+      active: false,
+      link: 'https://www.fylehq.com/partners/accounting-firms',
+    },
+    { label: 'Pricing', active: false, link: 'https://www.fylehq.com/pricing' },
+    { label: 'Resources', active: false },
   ];
   productsData = [
     {
@@ -86,61 +93,51 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  resourceLearnData =   [
+  resourceLearnData = [
     {
       redirectTo: 'https://www.fylehq.com/blog',
       headline: 'Blog',
     },
     {
-      redirectTo: 'https://help.fylehq.com/?_gl=1*rgh93t*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ.',
+      redirectTo:
+        'https://help.fylehq.com/?_gl=1*rgh93t*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ.',
       headline: 'Help center',
-    },  {
+    },
+    {
       redirectTo: 'https://www.fylehq.com/resources/guide',
       headline: 'Guides and Ebooks',
-    }, 
-  ]
-//   learn
-// Blog
-// Help center
-// Guides and Ebooks
+    },
+  ];
 
-resourceCustomersData =   [
-  {
-    redirectTo: 'https://www.fylehq.com/customer-success',
-    headline: 'Customer success',
-  },
-  {
-    redirectTo: 'https://www.fylehq.com/resources/templates',
-    headline: 'Help center',
-  },  {
-    redirectTo: 'https://www.fylehq.com/resources/guide',
-    headline: 'Implementation',
-  }, 
-]
-// customers
-// Customer success
-// Customer reviews
-// Implementation
+  resourceCustomersData = [
+    {
+      redirectTo: 'https://www.fylehq.com/customer-success',
+      headline: 'Customer success',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/resources/templates',
+      headline: 'Help center',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/resources/guide',
+      headline: 'Implementation',
+    },
+  ];
 
-resourceCompanyData =   [
-  {
-    redirectTo: 'https://www.fylehq.com/partners',
-    headline: 'Partners',
-  },
-  {
-    redirectTo: 'https://www.fylehq.com/partners/accounting-firms',
-    headline: 'Accounting Firms',
-  },  {
-    redirectTo: 'https://www.fylehq.com/banks',
-    headline: 'Banks',
-  }, 
-]
-// company
-// Partners
-// /assets/images/automated-expense-reporting/list-dot-icon.svg
-// Accounting Firms
-// /assets/images/automated-expense-reporting/list-dot-icon.svg
-// Banks
+  resourceCompanyData = [
+    {
+      redirectTo: 'https://www.fylehq.com/partners',
+      headline: 'Partners',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/partners/accounting-firms',
+      headline: 'Accounting Firms',
+    },
+    {
+      redirectTo: 'https://www.fylehq.com/banks',
+      headline: 'Banks',
+    },
+  ];
 
   ngOnInit(): void {
     // if (this.dropdownContentProductComponent) {

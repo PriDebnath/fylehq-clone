@@ -17,7 +17,7 @@ import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-mo
 export class NavComponent implements OnInit {
   svg = svg;
   showInfo: boolean = true;
-  mobileMenu: boolean = true;
+  mobileMenu: boolean = false;
   isMobile: boolean = false;
 
   activeDropdownMenu: string = '';

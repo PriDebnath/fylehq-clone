@@ -2,10 +2,23 @@
   @for (m of menu; track m) {
   <nz-collapse-panel
     #p
-    [nzHeader]="m.label"
-    [nzActive]="m.active"
+    [nzHeader]="
+      m.label == 'Accounting Firms' || m.label == 'Pricing'
+        ? headerTemplate
+        : m.label
+    "
     [nzExpandedIcon]="expandedIcon"
+    [nzShowArrow]="!(m.label == 'Accounting Firms' || m.label == 'Pricing')"
+    [nzActive]="m.active"
   >
+    <ng-template #headerTemplate>
+      <div>
+        <a [href]="m.link" target="_blank" class="color-brand-black">
+          {{ m.label }}
+        </a>
+      </div>
+    </ng-template>
+
     <ng-template #expandedIcon let-active>
       <span nz-icon nzType="caret-right" class="ant-collapse-arrow">
         <span>
@@ -45,7 +58,7 @@
       </span>
     </ng-template>
 
-    <div class="c">
+    <div class="blue-box">
       @if (m.label == menu[0].label || m.label == 'Products'){
       <!--  -->
       @for (item of productsData; track item) {

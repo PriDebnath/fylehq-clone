@@ -318,7 +318,7 @@
 <!-- Mobile menu -->
 <div *ngIf="mobileMenu">
   <div
-    class="position-fixed d-flex justify-content-center fade-in bg-white"
+    class="position-fixed fade-in bg-white"
     style="
       height: calc(100vh - 44px);
       width: 100%;
@@ -331,6 +331,32 @@
     "
   >
     <app-mobile-menu style="width: 100%"></app-mobile-menu>
+
+    <div class="mt-5">
+      <button
+        nz-button
+        nzType="default"
+        class="w-100 border-radius-6px hover-bg-primary color-white-hover border-2px-solid-brand-pink color-brand-pink"
+        (click)="handleGetDemo()"
+      >
+        <a
+          style="color: inherit"
+          href="https://app.fylehq.com/app/accounts/?_gl=1*1kxqpx5*_gcl_au*MTQ2NjY4OTkyMC4xNzIzNjM1ODcw#/signin"
+        >
+          Sign in
+        </a>
+      </button>
+    </div>
+    <div class="my-3">
+      <button
+        nz-button
+        nzType="primary"
+        class="w-100 border-radius-6px"
+        (click)="handleGetDemo()"
+      >
+        Get a demo
+      </button>
+    </div>
   </div>
 </div>
 

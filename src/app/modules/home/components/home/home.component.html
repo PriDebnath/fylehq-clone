@@ -1,5 +1,11 @@
-<app-nav (changeNavShowInfo)="handleChangeNavShowInfo($event)"></app-nav>
-<div class="" [ngStyle]="{ 'margin-top': showNavInfo ? '124px' : '44px' }">
+<app-nav
+  [isMobile]="isMobile"
+  (changeNavShowInfo)="handleChangeNavShowInfo($event)"
+></app-nav>
+<div
+  class=""
+  [ngStyle]="{ 'margin-top': showInfo && !isMobile ? '124px' : '44px' }"
+>
   <app-header></app-header>
 </div>
 <div class="brand-container m-auto">

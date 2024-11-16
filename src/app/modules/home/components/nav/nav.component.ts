@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   HostListener,
+  Input,
   OnInit,
   Output,
 } from '@angular/core';
@@ -18,7 +19,7 @@ export class NavComponent implements OnInit {
   svg = svg;
   showInfo: boolean = true;
   mobileMenu: boolean = false;
-  isMobile: boolean = false;
+  @Input() isMobile: boolean = false;
 
   activeDropdownMenu: string = '';
 
@@ -26,9 +27,7 @@ export class NavComponent implements OnInit {
 
   constructor(public nzModalService: NzModalService) {}
 
-  ngOnInit(): void {
-    this.checkScreenSize();
-  }
+  ngOnInit(): void {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -40,17 +39,7 @@ export class NavComponent implements OnInit {
     }
     // this.changeNavShowInfo.emit(this.showInfo);
   }
-  @HostListener('window:resize', [])
-  onResize() {
-    this.checkScreenSize();
-  }
 
-  private checkScreenSize() {
-    this.isMobile = window.innerWidth <= 768; // Adjust the width as per your mobile breakpoint
-    if (this.isMobile) {
-      this.showInfo = false;
-    }
-  }
   handleNavLinkMouseover(event: any) {
     this.activeDropdownMenu = event;
     console.log(event);

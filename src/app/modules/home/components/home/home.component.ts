@@ -17,13 +17,16 @@ export class HomeComponent implements OnInit, AfterContentChecked {
     'Collect receipts 5X faster',
     'Automated AI-based coding',
   ];
-  showNavInfo: boolean = true;
+  showInfo: boolean = true;
+  isMobile: boolean = false;
+
   pageTitle: string = 'Fyle | Intelligent Expense Management Software';
   constructor(private title: Title) {}
 
   ngOnInit(): void {
     this.title.setTitle(this.pageTitle);
     this.startObserveringImages();
+    this.checkScreenSize();
   }
 
   ngAfterContentChecked(): void {}
@@ -36,8 +39,21 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   //     this.showNavInfo = true;
   //   }
   // }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768; // Adjust the width as per your mobile breakpoint
+    if (this.isMobile) {
+      this.showInfo = false;
+    }
+  }
+
   handleChangeNavShowInfo(showNavInfo: boolean) {
-    this.showNavInfo = showNavInfo;
+    this.showInfo = showNavInfo;
   }
 
   startObserveringImages() {

@@ -106,7 +106,7 @@
       'bg-white': !showInfo,
       'main-nav-shadow': !showInfo
     }"
-    [ngStyle]="{ top: showInfo ? '44px' : '0px' }"
+    [ngStyle]="{ top: showInfo && !isMobile ? '44px' : '0px' }"
   >
     <div
       class="brand-container d-flex justify-content-between align-items-center"
@@ -231,7 +231,7 @@
       </div>
       <!-- Desktop nav link end -->
       <!-- Mobile Hamburger menu start -->
-      <div (click)="mobileMenu = !mobileMenu">
+      <div (click)="mobileMenu = !mobileMenu" class="cursor-pointer">
         <span *ngIf="!mobileMenu">
           <svg
             id="mobile-hamburger"

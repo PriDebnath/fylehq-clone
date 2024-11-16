@@ -46,9 +46,12 @@
     </ng-template>
 
     <div class="c">
-      @if (m.label == menu[0].label || m.label == 'Products'){ @for (item of
-      col1; track item) { @if (item.headline == col1[4].headline ||
-      item.headline == 'Cards') {
+      @if (m.label == menu[0].label || m.label == 'Products'){
+      <!--  -->
+      @for (item of productsData; track item) {
+      <!--  -->
+      @if (item.headline == productsData[4].headline || item.headline ==
+      'Cards') {
       <div class="pb-4">
         <p class="color-brand-grey">
           <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
@@ -122,7 +125,7 @@
         </li>
       </div>
 
-      } @else if (item.headline == col1[5].headline || item.headline ==
+      } @else if (item.headline == productsData[5].headline || item.headline ==
       'Integrations') {
 
       <p class="color-brand-grey">
@@ -205,15 +208,14 @@
           "
         ></app-link-with-right-arrow>
       </div>
-      }@else{
+
+      } @else if (item.headline == productsData[9].headline || item.headline ==
+      'Budgets'){
       <p class="pb-4 color-brand-grey">
         <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
           {{ item.headline }}
         </a>
       </p>
-
-      } } }
-
       <div class="blue-pritam"></div>
       <div class="mt-3">
         <app-link-with-right-arrow
@@ -222,6 +224,56 @@
           [link]="'https://www.fylehq.com/product'"
         ></app-link-with-right-arrow>
       </div>
+      } @else{
+      <p class="pb-4 color-brand-grey">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
+
+      } } } @if (m.label == menu[1].label || m.label == 'Solution'){
+      <p class="pb-4 color-brand-black font-weight-600">BY INDUSTRY</p>
+      @for (item of solutionsData; track item;let last = $last) {
+      <p class="color-brand-grey" [ngClass]="last ? 'pb-0' : 'pb-4'">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
+
+      }} @if (m.label == menu[4].label || m.label == 'Resources'){
+      <p class="pt-3 pb-2 color-brand-black font-weight-600">LEARN</p>
+      @for (item of resourceLearnData; track item;let last = $last) {
+      <p class="color-brand-grey" [ngClass]="last ? 'pb-1' : 'pb-3'">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
+      <!--  -->
+      }
+      <p class="pt-3 pb-2 color-brand-black font-weight-600">CUSTOMERS</p>
+      @for (item of resourceCustomersData; track item;let last = $last) {
+      <p class="color-brand-grey" [ngClass]="last ? 'pb-1' : 'pb-3'">
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </p>
+      }
+      <p class="pt-3 pb-2 color-brand-black font-weight-600">COMPANY</p>
+      @for (item of resourceCompanyData; track item;let last = $last;let first =
+      $first) {
+      <li
+        class="color-brand-grey"
+        [ngClass]="{
+          'pb-1': !last,
+          'pb-3': last,
+          'list-style-initial': !first
+        }"
+      >
+        <a [href]="item.redirectTo" class="color-brand-grey hover-underline">
+          {{ item.headline }}
+        </a>
+      </li>
+      } }
     </div>
   </nz-collapse-panel>
   <div class="blue-pritam"></div>

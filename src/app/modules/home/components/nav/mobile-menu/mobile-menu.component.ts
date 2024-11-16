@@ -13,8 +13,14 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
 
   @ViewChild(DropdownContentProductComponent)
   dropdownContentProductComponent!: DropdownContentProductComponent;
-
-  col1 = [
+  menu = [
+    { label: 'Product', active: false },
+    { label: 'Solutions', active: false },
+    { label: 'Accounting Firms', active: false },
+    { label: 'Pricing', active: false },
+    { label: 'Resources', active: true },
+  ];
+  productsData = [
     {
       redirectTo:
         'https://www.fylehq.com/product/conversational-ai-for-expenses',
@@ -57,13 +63,84 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
       headline: 'Budgets',
     },
   ];
-  menu = [
-    { label: 'Product', active: true },
-    { label: 'Solutions', active: false },
-    { label: 'Accounting Firms', active: false },
-    { label: 'Pricing', active: false },
-    { label: 'Resources', active: false },
+
+  solutionsData = [
+    {
+      redirectTo: 'https://www.fylehq.com/solutions/industry/construction',
+      headline: 'Construction',
+    },
+    {
+      redirectTo:
+        'https://www.fylehq.com/solutions/industry/non-profit-organizations',
+      headline: 'Non-profit',
+    },
+    {
+      redirectTo:
+        'https://www.fylehq.com/solutions/industry/information-technology',
+      headline: 'Technology',
+    },
+    {
+      redirectTo:
+        'https://www.fylehq.com/solutions/industry/professional-services',
+      headline: 'Professional services',
+    },
   ];
+
+  resourceLearnData =   [
+    {
+      redirectTo: 'https://www.fylehq.com/blog',
+      headline: 'Blog',
+    },
+    {
+      redirectTo: 'https://help.fylehq.com/?_gl=1*rgh93t*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ.',
+      headline: 'Help center',
+    },  {
+      redirectTo: 'https://www.fylehq.com/resources/guide',
+      headline: 'Guides and Ebooks',
+    }, 
+  ]
+//   learn
+// Blog
+// Help center
+// Guides and Ebooks
+
+resourceCustomersData =   [
+  {
+    redirectTo: 'https://www.fylehq.com/customer-success',
+    headline: 'Customer success',
+  },
+  {
+    redirectTo: 'https://www.fylehq.com/resources/templates',
+    headline: 'Help center',
+  },  {
+    redirectTo: 'https://www.fylehq.com/resources/guide',
+    headline: 'Implementation',
+  }, 
+]
+// customers
+// Customer success
+// Customer reviews
+// Implementation
+
+resourceCompanyData =   [
+  {
+    redirectTo: 'https://www.fylehq.com/partners',
+    headline: 'Partners',
+  },
+  {
+    redirectTo: 'https://www.fylehq.com/partners/accounting-firms',
+    headline: 'Accounting Firms',
+  },  {
+    redirectTo: 'https://www.fylehq.com/banks',
+    headline: 'Banks',
+  }, 
+]
+// company
+// Partners
+// /assets/images/automated-expense-reporting/list-dot-icon.svg
+// Accounting Firms
+// /assets/images/automated-expense-reporting/list-dot-icon.svg
+// Banks
 
   ngOnInit(): void {
     // if (this.dropdownContentProductComponent) {

@@ -6,7 +6,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgZorroAntdModule } from '../ng-zorro-antd/ng-zorro-antd.module';
 import { HeaderComponent } from './components/header/header.component';
-import { HeadlineAndSublineComponent } from './components/headline-and-subline/headline-and-subline.component';
+import { HeadlineAndSublineComponent } from './components/shared/headline-and-subline/headline-and-subline.component';
 import { NavFeatureCardComponent } from './components/nav/nav-feature-card/nav-feature-card.component';
 import { HtmlSanitizerPipe } from './pipes/html-sanitizer/html-sanitizer.pipe';
 import { DropdownContentProductComponent } from './components/nav/dropdowns-pritam/dropdown-content-product/dropdown-content-product.component';

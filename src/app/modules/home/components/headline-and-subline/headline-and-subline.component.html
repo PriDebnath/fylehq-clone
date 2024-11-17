@@ -1,6 +1,10 @@
 <div [ngStyle]="containerStyle" [ngClass]="containerClass">
-  <h1 class="color-brand-black headline">{{ headline }}</h1>
-  <h2 class="color-brand-grey subline" [ngClass]="link ? 'p-0' : 'pb-4'">
+  <h1 *ngIf="headline" class="color-brand-black headline">{{ headline }}</h1>
+  <h2
+    *ngIf="subline"
+    class="color-brand-grey subline"
+    [ngClass]="link ? 'p-0' : 'pb-4'"
+  >
     {{ subline }}
   </h2>
   <app-link-with-right-arrow

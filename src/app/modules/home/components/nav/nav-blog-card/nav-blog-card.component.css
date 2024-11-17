@@ -5,7 +5,4 @@
   box-shadow: 1.61125px 4.83376px 9.66752px rgba(0, 0, 0, 0.05);
   transition: 0.2s;
   display: block;
-  &:hover {
-    transform: translateY(-2px);
-  }
 }

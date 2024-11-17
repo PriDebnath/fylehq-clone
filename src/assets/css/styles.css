@@ -180,15 +180,15 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 990px) {
   .brand-container {
-    width: 1140px;
+    max-width: 960px;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .brand-container {
-    width: 920px;
+    max-width: 1140px;
   }
 }
 
@@ -359,6 +359,8 @@ img {
   text-decoration: underline !important;
 }
 
+/* ANIMATION */
+
 .fade-in {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -369,4 +371,9 @@ img {
   100% {
     opacity: 1;
   }
+}
+
+.uplift-2px-on-hover:hover {
+  transform: translateY(-2px);
+  transition: opacity 1s ease-in-out;
 }

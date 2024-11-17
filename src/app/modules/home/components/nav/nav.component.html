@@ -231,7 +231,11 @@
       </div>
       <!-- Desktop nav link end -->
       <!-- Mobile Hamburger menu start -->
-      <div (click)="mobileMenu = !mobileMenu" class="cursor-pointer">
+      <div
+        *ngIf="isMobile"
+        (click)="mobileMenu = !mobileMenu"
+        class="cursor-pointer"
+      >
         <span *ngIf="!mobileMenu">
           <svg
             id="mobile-hamburger"

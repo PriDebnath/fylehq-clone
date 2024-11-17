@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
 export class HeadlineAndSublineComponent {
   @Input() containerClass?: { [key: string]: boolean };
   @Input() containerStyle?: { [key: string]: string };
-  @Input() headline: string = 'headline';
-  @Input() subline: string = 'subline';
+  @Input() headline: string = '';
+  @Input() subline: string = '';
   @Input() link: string = '';
   @Input() linkText: string = '';
 }

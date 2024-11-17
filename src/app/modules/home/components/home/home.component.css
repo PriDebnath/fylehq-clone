@@ -1,12 +1,26 @@
- .tick-icon-wrapper:after {
-    background: #e3e7fa;
-    content: "";
-    height: 75%;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    width: 1px;
-    z-index: -2;
+.tick-icon-wrapper:after {
+  background: #e3e7fa;
+  content: "";
+  height: 75%;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 1px;
+  z-index: -2;
+}
+
+.payment-card-logo {
+  /* background: url(/assets/js/a2bae02….png) top no-repeat; */
+  background-size: contain;
+  border-radius: 25px;
+  display: inline-flex;
+  height: 30px;
+  margin-right: 10px;
+  padding: 3px 20px;
+  transition: all 0.5s ease;
+  width: 86px;
+  border: 1px solid #f1f1f1;
+  border-radius: 1.5rem;
 }

@@ -19,6 +19,7 @@ import { InputBrandComponent } from './components/shared/input-brand/input-brand
 import { ParagraphComponent } from './components/shared/paragraph/paragraph.component';
 import { LinkWithRightArrowComponent } from './components/shared/link-with-right-arrow/link-with-right-arrow.component';
 import { MobileMenuComponent } from './components/nav/mobile-menu/mobile-menu.component';
+import { FeatureSectionComponent } from './components/shared/feature-section/feature-section.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MobileMenuComponent } from './components/nav/mobile-menu/mobile-menu.co
     ParagraphComponent,
     LinkWithRightArrowComponent,
     MobileMenuComponent,
+    FeatureSectionComponent,
   ],
   imports: [
     CommonModule,

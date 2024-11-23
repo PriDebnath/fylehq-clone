@@ -1,0 +1,75 @@
+* {
+  transition: 0.2s;
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.customer-card-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.customer-card-container__img-container {
+  min-width: 230px;
+}
+
+.customer-card-container__img-container img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.quote {
+  background: no-repeat center url("/assets/images/customer-quote.png");
+}
+
+.customer-card-container__bg {
+  height: 100%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  border-radius: 0.25rem;
+  background-color: var(--brand-light-sky-blue);
+  overflow: hidden;
+}
+
+.card-navigation {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.card-prev {
+  background: no-repeat center url("/assets/images/card-prev.svg");
+}
+
+.card-prev:hover {
+  background: no-repeat center url("/assets/images/card-prev-hover.svg");
+}
+
+.card-next {
+  background: no-repeat center url("/assets/images/card-next.svg");
+}
+
+.card-next:hover {
+  background: no-repeat center url("/assets/images/card-next-hover.svg");
+}

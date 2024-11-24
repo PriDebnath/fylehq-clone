@@ -14,6 +14,32 @@ import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-mo
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, AfterContentChecked {
+  realTimeSpendVisibilityCardData = [
+    {
+      imgSrc: '/assets/images/monitor-employee-spend-in-real-time.png',
+      headline: 'Monitor employee spend in real-time',
+      list: [
+        'Get real-time visibility into card spend and out of pocket expenses in one place.',
+        'Drill down your spend data to uncover usage patterns, identify new opportunities for better cashflow management.',
+      ],
+    },
+    {
+      imgSrc: '/assets/images/Eliminate-wasted-spend.png',
+      headline: 'Eliminate wasted spend',
+      list: [
+        'Create budgets for different Projects, Departments, categories and more.',
+        'Get notified every time you exceed your budgets.',
+      ],
+    },
+    {
+      imgSrc: '/assets/images/approvals-workflow.png',
+      headline: 'Ensure expenses are approved easily',
+      list: [
+        'Configure approval workflows and let managers approve expenses on-the-go.',
+        'Be audit-ready with centralized storage of all billable, expense receipts, and reimbursable expenses.',
+      ],
+    },
+  ];
   tickList: string[] = [
     'No learning curve for employees',
     'Collect receipts 5X faster',

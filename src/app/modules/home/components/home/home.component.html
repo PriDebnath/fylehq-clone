@@ -176,7 +176,7 @@
 </div>
 
 <div class="brand-container m-auto">
-  <app-customer-section></app-customer-section>
+  <!-- <app-customer-section></app-customer-section> -->
 </div>
 <div class="brand-container m-auto py-5">
   <a
@@ -215,8 +215,8 @@
     </span>
   </a>
 </div>
-<div class="m-auto real-time" style="padding: 5rem 0">
-  <h2 class="font-size-30px font-weight-500 text-center pb-3">
+<!--<div class="m-auto real-time" style="padding: 5rem 0">
+   <h2 class="font-size-30px font-weight-500 text-center pb-3">
     Explore real-time expense management with Fyle
   </h2>
   <div class="text-center w-100">
@@ -229,4 +229,30 @@
       Get a demo
     </button>
   </div>
+</div> -->
+<div class="brand-container m-auto">
+  <div class="m-5 p-5">
+    <app-headline-and-subline
+      [containerStyle]="{ padding: '0 15px' }"
+      [containerClass]="{ 'text-center': true, 'px-4': true }"
+      headline="Make better decisions with real-time spend visibility"
+      subline="Get instant access to real-time data across all your card programs. You make better
+    decisions with accurate data in one place."
+    ></app-headline-and-subline>
+  </div>
 </div>
+<div class="brand-container m-auto">
+  <div class="row">
+    @for ( item of realTimeSpendVisibilityCardData; track $index){
+    <div class="col-12 col-md-4 px-5 px-md-3">
+      <app-real-time-spend-visibility-card
+        [isMobile]="isMobile"
+        [imgSrc]="item.imgSrc"
+        [headline]="item.headline"
+        [list]="item.list"
+      ></app-real-time-spend-visibility-card>
+    </div>
+    }
+  </div>
+</div>
+<div class="brand-container m-auto"></div>

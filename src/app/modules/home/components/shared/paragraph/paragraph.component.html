@@ -1,4 +1,4 @@
 <div class="paragraph">
-  <h4 class="para">{{ paragraphHeader }}</h4>
-  <p class="para">{{ paragraphBody }}</p>
+  <h4 *ngIf="paragraphHeader" class="para">{{ paragraphHeader }}</h4>
+  <p *ngIf="paragraphBody" class="para">{{ paragraphBody }}</p>
 </div>

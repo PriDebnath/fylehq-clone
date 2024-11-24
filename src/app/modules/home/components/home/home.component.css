@@ -24,3 +24,38 @@
   border: 1px solid #f1f1f1;
   border-radius: 1.5rem;
 }
+
+.real-time {
+  background-image: linear-gradient(54deg, #fff2f5 -1%, #ebf3fd 74%);
+  position: relative;
+}
+
+.real-time::after {
+  background-image: url(/assets/images/blue-curved-line-right.png),
+    url(/assets/images/blue-curved-line-right.png);
+  background-position: 100% 0, 100% -4%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, 14%;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.real-time::before {
+  background-image: url(/assets/images/blue-curved-line-left.png),
+    url(/assets/images/blue-curved-line-left.png);
+  background-position: 0 100%, -4% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, 14%;
+  top: 0;
+  content: "";
+  height: 100%;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}

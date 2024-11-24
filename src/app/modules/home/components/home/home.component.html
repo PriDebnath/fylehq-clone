@@ -9,7 +9,7 @@
   <!-- <app-header></app-header> -->
 </div>
 <div class="brand-container m-auto">
-  <div class="d-flex justify-contefnt-center">
+  <div class="d-flex justify-content-center">
     <div class="col col-12 col-lg-10">
       <!-- <app-headline-and-subline
         [containerStyle]="{ padding: '0 15px' }"
@@ -100,66 +100,133 @@
           <div><img src="/assets/images/current-way.png" /></div>
         </div> -->
       </div>
-      <!-- See employee spend in real-time, like never before -->
-
-      <div class="row flex-wrap-reverse my-3">
-        <div class="col col-12 col-md-6">
-          <div><img src="/assets/images/real-time-spend.png" /></div>
-        </div>
-        <div class="col col-12 col-md-6">
-          <div class="color-brand-black font-size-24px">
-            See employee spend in real-time, like never before
-          </div>
-          <app-paragraph
-            paragraphBody="Fyle directly integrates with your existing business cards:            "
-          ></app-paragraph>
-          <div class="d-flex p-3">
-            <a href="https://www.fylehq.com/product/cards/visa">
-              <img
-                src="/assets/images/visa-logo.webp"
-                class="payment-card-logo uplift-2px-on-hover cursor-pointer"
-              />
-            </a>
-            <a href="https://www.fylehq.com/product/cards/mastercard">
-              <img
-                src="/assets/images/mastercard-logo.webp"
-                class="payment-card-logo uplift-2px-on-hover cursor-pointer"
-              />
-            </a>
-            <a
-              href="https://www.fylehq.com/product/american-express-virtual-cards"
-            >
-              <img
-                src="/assets/images/amex-logo.webp"
-                class="payment-card-logo uplift-2px-on-hover cursor-pointer"
-              />
-            </a>
-          </div>
-          <app-headline-and-subline
-            subline="See employee expenses the moment they swipe their credit cards with real-time data*. Cardholders get quick text alerts, making it easy to manage and collect receipts."
-          ></app-headline-and-subline>
-          <app-headline-and-subline
-            subline="* Real-time transaction data available for Visa, Mastercard and American Express virtual Cards."
-          ></app-headline-and-subline>
-        </div>
-      </div>
-
-      <!--  -->
-      <div class="py-3">
-        <app-feature-section
-          headline="Automate credit card reconciliation"
-          subline="Fyle helps you collect receipts via text and automatically matches them to the right transactions. Don't waste hours every month on manual reconciliation, and close books on time."
-          linkText="Learn more about credit card reconciliation"
-          [link]="'https://www.fylehq.com/product/cards'"
-          imgSrc="/assets/images/credit-card-receipt-tracking-and-expense-form-2x.png"
-        ></app-feature-section>
-      </div>
-
-      <app-feature-section
-        headline="Ensure expense compliance with no manual effort"
-        subline="Fyle’s platform automatically detects and flags out-of-policy spend based on the rules you set, so you don’t have to manually review every expense."
-        imgSrc="/assets/images/policy-violation-mobile.png"
-      ></app-feature-section>
     </div>
+  </div>
+</div>
+<!-- See employee spend in real-time, like never before -->
+<div class="brand-container m-auto">
+  <!-- <div class="row flex-wrap-reverse py-5">
+    <div class="col col-12 col-md-6">
+      <div><img src="/assets/images/real-time-spend.png" /></div>
+    </div>
+    <div class="col col-12 col-md-6">
+      <div class="color-brand-black font-size-24px">
+        See employee spend in real-time, like never before
+      </div>
+      <app-paragraph
+        paragraphBody="Fyle directly integrates with your existing business cards:            "
+      ></app-paragraph>
+      <div class="d-flex p-3">
+        <a href="https://www.fylehq.com/product/cards/visa">
+          <img
+            src="/assets/images/visa-logo.webp"
+            class="payment-card-logo uplift-2px-on-hover cursor-pointer"
+          />
+        </a>
+        <a href="https://www.fylehq.com/product/cards/mastercard">
+          <img
+            src="/assets/images/mastercard-logo.webp"
+            class="payment-card-logo uplift-2px-on-hover cursor-pointer"
+          />
+        </a>
+        <a href="https://www.fylehq.com/product/american-express-virtual-cards">
+          <img
+            src="/assets/images/amex-logo.webp"
+            class="payment-card-logo uplift-2px-on-hover cursor-pointer"
+          />
+        </a>
+      </div>
+      <app-headline-and-subline
+        subline="See employee expenses the moment they swipe their credit cards with real-time data*. Cardholders get quick text alerts, making it easy to manage and collect receipts."
+      ></app-headline-and-subline>
+      <app-headline-and-subline
+        subline="* Real-time transaction data available for Visa, Mastercard and American Express virtual Cards."
+      ></app-headline-and-subline>
+    </div>
+  </div> -->
+
+  <!--  -->
+  <!-- <div class="py-5">
+    <app-feature-section
+      headline="Automate credit card reconciliation"
+      subline="Fyle helps you collect receipts via text and automatically matches them to the right transactions. Don't waste hours every month on manual reconciliation, and close books on time."
+      linkText="Learn more about credit card reconciliation"
+      [link]="'https://www.fylehq.com/product/cards'"
+      imgSrc="/assets/images/credit-card-receipt-tracking-and-expense-form-2x.png"
+    ></app-feature-section>
+  </div>
+
+  <div class="py-5">
+    <app-feature-section
+      containerClass="flex-row-reverse"
+      headline="Ensure expense compliance with no manual effort"
+      subline="Fyle’s platform automatically detects and flags out-of-policy spend based on the rules you set, so you don’t have to manually review every expense."
+      imgSrc="/assets/images/policy-violation-mobile.png"
+    ></app-feature-section>
+  </div>
+  <div class="py-5">
+    <app-feature-section
+      headline="Sync expenses with your accounting platform automatically"
+      subline="Fyle has powerful, two-way integrations with QuickBooks Online, QuickBooks Desktop, NetSuite, Sage Intacct, Sage 300 CRE & Xero. Automatically sync all your expense data, including receipts, card transactions, GL codes, projects, taxes and custom fields, in real-time."
+      imgSrc="/assets/images/accounting-integrations.png"
+      linkText="Learn more about accounting integrations"
+      [link]="'https://www.fylehq.com/product/integrations'"
+    ></app-feature-section>
+  </div> -->
+</div>
+
+<div class="brand-container m-auto">
+  <app-customer-section></app-customer-section>
+</div>
+<div class="brand-container m-auto py-5">
+  <a
+    href="https://www.fylehq.com/customer-success"
+    class="hover-underline pb-4 font-size-16px color-brand-black d-flex align-items-center text-center justify-content-center"
+  >
+    <span> Customers love us for good reason </span>
+    <span class="mx-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+      >
+        <defs>
+          <path
+            id="x612hm8boa"
+            d="M7 8c-.298 0-.597-.112-.825-.335L.342 1.951C-.114 1.504-.114.782.342.335c.456-.447 1.194-.447 1.65 0L7 5.241 12.01.335c.456-.447 1.193-.447 1.65 0 .456.447.456 1.17 0 1.616L7.824 7.665C7.598 7.888 7.3 8 7 8"
+          />
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <g>
+            <g>
+              <g>
+                <g
+                  transform="translate(-751 -2888) translate(0 2778) translate(526 80) rotate(-90 134.5 -90.5)"
+                >
+                  <use fill="#6F718F" xlink:href="#x612hm8boa" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+  </a>
+</div>
+<div class="m-auto real-time" style="padding: 5rem 0">
+  <h2 class="font-size-30px font-weight-500 text-center pb-3">
+    Explore real-time expense management with Fyle
+  </h2>
+  <div class="text-center w-100">
+    <button
+      nz-button
+      nzType="default"
+      class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
+      (click)="handleGetDemo()"
+    >
+      Get a demo
+    </button>
   </div>
 </div>

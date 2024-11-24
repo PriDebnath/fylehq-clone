@@ -5,6 +5,8 @@ import {
   AfterContentChecked,
 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { GetADemoModalComponent } from '../modals/get-a-demo-modal/get-a-demo-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   isMobile: boolean = false;
 
   pageTitle: string = 'Fyle | Intelligent Expense Management Software';
-  constructor(private title: Title) {}
+  constructor(private title: Title, public nzModalService: NzModalService) {}
 
   ngOnInit(): void {
     this.title.setTitle(this.pageTitle);
@@ -74,6 +76,14 @@ export class HomeComponent implements OnInit, AfterContentChecked {
     // Observe each image
     images.forEach((image) => {
       observer.observe(image);
+    });
+  }
+
+  handleGetDemo() {
+    this.nzModalService.create({
+      nzContent: GetADemoModalComponent,
+      nzFooter: null,
+      nzClosable: false,
     });
   }
 }

@@ -20,6 +20,7 @@ import { ParagraphComponent } from './components/shared/paragraph/paragraph.comp
 import { LinkWithRightArrowComponent } from './components/shared/link-with-right-arrow/link-with-right-arrow.component';
 import { MobileMenuComponent } from './components/nav/mobile-menu/mobile-menu.component';
 import { FeatureSectionComponent } from './components/shared/feature-section/feature-section.component';
+import { CustomerSectionComponent } from './components/shared/customer-section/customer-section.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FeatureSectionComponent } from './components/shared/feature-section/fea
     LinkWithRightArrowComponent,
     MobileMenuComponent,
     FeatureSectionComponent,
+    CustomerSectionComponent,
   ],
   imports: [
     CommonModule,

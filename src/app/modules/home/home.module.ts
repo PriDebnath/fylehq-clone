@@ -21,6 +21,8 @@ import { LinkWithRightArrowComponent } from './components/shared/link-with-right
 import { MobileMenuComponent } from './components/nav/mobile-menu/mobile-menu.component';
 import { FeatureSectionComponent } from './components/shared/feature-section/feature-section.component';
 import { CustomerSectionComponent } from './components/shared/customer-section/customer-section.component';
+import { RealTimeSpendVisibilityCardComponent } from './components/shared/real-time-spend-visibility-card/real-time-spend-visibility-card.component';
+import { OurAttentionSectionComponent } from './components/shared/our-attention-section/our-attention-section.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { CustomerSectionComponent } from './components/shared/customer-section/c
     MobileMenuComponent,
     FeatureSectionComponent,
     CustomerSectionComponent,
+    RealTimeSpendVisibilityCardComponent,
+    OurAttentionSectionComponent,
   ],
   imports: [
     CommonModule,

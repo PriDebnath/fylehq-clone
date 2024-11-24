@@ -116,6 +116,10 @@ img {
 
 /* FONT SIZE */
 
+.font-size-10px {
+  font-size: 10px;
+}
+
 .font-size-12px {
   font-size: 12px;
 }
@@ -138,6 +142,10 @@ img {
 
 .font-size-24px {
   font-size: 24px;
+}
+
+.font-size-30px {
+  font-size: 30px;
 }
 
 /* FONT WEIGHT */

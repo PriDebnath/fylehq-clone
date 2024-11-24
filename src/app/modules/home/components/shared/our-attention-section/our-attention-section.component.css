@@ -1,0 +1,32 @@
+.box-container {
+  display: grid;
+  padding: 4rem 3rem;
+  grid-template-areas:
+    "box-1"
+    "box-2"
+    "box-3"
+    "box-4";
+  background-image: linear-gradient(54deg, #fff2f5 -1%, #ebf3fd 74%);
+}
+
+@media (min-width: 772px) {
+  .box-container {
+    grid-template-areas:
+      "box-1 box-4"
+      "box-2 box-4"
+      "box-3 box-4";
+  }
+}
+
+.box-1 {
+  grid-area: box-1;
+}
+.box-2 {
+  grid-area: box-2;
+}
+.box-3 {
+  grid-area: box-3;
+}
+.box-4 {
+  grid-area: box-4;
+}

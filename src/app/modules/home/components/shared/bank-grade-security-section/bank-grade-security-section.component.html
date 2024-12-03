@@ -1,0 +1,24 @@
+<div class="bank-grade-security-section row flex-md-row-reverse">
+  <div class="col-12 col-md-6">
+    <div class="px-5">
+      <img src="/assets/images/bank-grade-security.png" />
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <app-headline-and-subline
+      [headline]="'Bank-grade security for your expense data'"
+      subline="Fyle ensures all your account, expense, card, and employee information is secure."
+    ></app-headline-and-subline>
+
+    @for(item of list;track item ){
+    <p class="d-flex align-items-center">
+      <img
+        src="/assets/images/blue-tick-without-circle.svg"
+        style="width: 12px; height: 10px"
+      />
+      <span class="px-3"> {{ item }}</span>
+    </p>
+    }
+  </div>
+</div>

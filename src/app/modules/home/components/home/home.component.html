@@ -256,5 +256,112 @@
   </div>
 </div> -->
 <app-our-attention-section></app-our-attention-section>
+<div
+  style="
+    background: linear-gradient(
+      281.74deg,
+      hsla(0, 100%, 91%, 0.7) 11.33%,
+      rgba(232, 243, 254, 0.7) 50.36%,
+      rgba(210, 232, 255, 0.7) 95.82%,
+      rgba(216, 235, 255, 0.7) 121.5%
+    );
+  "
+>
+  <div class="brand-container m-auto py-5">
+    <div class="p-2 p-md-5">
+      <app-headline-and-subline
+        [containerStyle]="{ padding: '0 15px' }"
+        [containerClass]="{ 'text-center': true, 'px-4': true }"
+        headline="Fyle for Client Accounting Services Firms"
+        subline="Let Fyle do the operational heavy-lifting by automating expense management for your clients, so that you can focus on your advisory services. Manage multiple clients easily from your dedicated partner dashboard and close client books faster with automated receipt matching, AI-powered expense coding, and tight accounting integrations."
+      ></app-headline-and-subline>
+      <div class="px-5">
+        <img src="/assets/images/partner-accounting-firms-mob-3x.png" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="brand-container m-auto py-5">
+  <a
+    href="https://www.fylehq.com/partners/accounting-firms"
+    class="hover-underline pb-4 font-size-16px color-brand-black d-flex align-items-center text-center justify-content-center"
+  >
+    <span> Learn more </span>
+    <span class="mx-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+      >
+        <defs>
+          <path
+            id="x612hm8boa"
+            d="M7 8c-.298 0-.597-.112-.825-.335L.342 1.951C-.114 1.504-.114.782.342.335c.456-.447 1.194-.447 1.65 0L7 5.241 12.01.335c.456-.447 1.193-.447 1.65 0 .456.447.456 1.17 0 1.616L7.824 7.665C7.598 7.888 7.3 8 7 8"
+          />
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <g>
+            <g>
+              <g>
+                <g
+                  transform="translate(-751 -2888) translate(0 2778) translate(526 80) rotate(-90 134.5 -90.5)"
+                >
+                  <use fill="#6F718F" xlink:href="#x612hm8boa" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+  </a>
+</div>
+<div
+  style="
+    background: linear-gradient(
+      281.74deg,
+      hsla(0, 100%, 91%, 0.7) 11.33%,
+      rgba(232, 243, 254, 0.7) 50.36%,
+      rgba(210, 232, 255, 0.7) 95.82%,
+      rgba(216, 235, 255, 0.7) 121.5%
+    );
+  "
+>
+  <div class="brand-container m-auto">
+    <app-bank-grade-security-section></app-bank-grade-security-section>
+  </div>
+</div>
+<div class="row p-5">
+  <div class="col-12 col-md-6">
+    <div
+      class="px-5 d-flex flex-column align-items-center justify-content-center"
+      style="height: 100%"
+    >
+      <div class="py-3">
+        <app-headline-and-subline
+          headline="One expense management app to do it all."
+        ></app-headline-and-subline>
+      </div>
 
-<div class="" style="height: 15rem"></div>
+      <div class="text-center w-100" *ngIf="!isMobile">
+        <button
+          nz-button
+          nzType="default"
+          class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
+          (click)="handleGetDemo()"
+        >
+          Get a demo
+        </button>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <img src="/assets/images/badges-ratings-3x.png" />
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <img src="/assets/images/badges-ratings-3x.webp" />
+  </div>
+  <div class="" style="height: 15rem"></div>
+</div>

@@ -23,6 +23,7 @@ import { FeatureSectionComponent } from './components/shared/feature-section/fea
 import { CustomerSectionComponent } from './components/shared/customer-section/customer-section.component';
 import { RealTimeSpendVisibilityCardComponent } from './components/shared/real-time-spend-visibility-card/real-time-spend-visibility-card.component';
 import { OurAttentionSectionComponent } from './components/shared/our-attention-section/our-attention-section.component';
+import { BankGradeSecuritySectionComponent } from './components/shared/bank-grade-security-section/bank-grade-security-section.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { OurAttentionSectionComponent } from './components/shared/our-attention-
     CustomerSectionComponent,
     RealTimeSpendVisibilityCardComponent,
     OurAttentionSectionComponent,
+    BankGradeSecuritySectionComponent,
   ],
   imports: [
     CommonModule,

@@ -31,7 +31,6 @@ export class NavComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    console.log(window.scrollY);
     if (window.scrollY > 50) {
       this.showInfo = false;
     } else {
@@ -42,7 +41,6 @@ export class NavComponent implements OnInit {
 
   handleNavLinkMouseover(event: any) {
     this.activeDropdownMenu = event;
-    console.log(event);
   }
 
   handleDropdownMenuMouseleave() {

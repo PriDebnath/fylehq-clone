@@ -13,10 +13,6 @@
   padding: 4rem 0;
 }
 
-.customer-card-container__img-container {
-  min-width: 230px;
-}
-
 .customer-card-container__img-container img {
   -o-object-fit: cover;
   object-fit: cover;

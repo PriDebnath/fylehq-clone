@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-customer-section',
@@ -124,6 +124,7 @@ export class CustomerSectionComponent {
 
   currentCardIndex: number = 0;
   showCardDetails = true;
+  @Input() isMobile: boolean = false;
 
   nextCard() {
     this.showCardDetails = false;
@@ -140,5 +141,5 @@ export class CustomerSectionComponent {
         (this.currentCardIndex - 1 + this.cards.length) % this.cards.length;
       this.showCardDetails = true;
     }, 300);
-    }
+  }
 }

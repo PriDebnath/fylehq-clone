@@ -363,26 +363,3 @@
     </div>
   </div>
 </div>
-
-<!-- Mobile fixed get demo button -->
-<div
-  *ngIf="!mobileMenu"
-  class="position-fixed d-flex justify-content-center d-sm-none"
-  style="
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-color: var(--brand-black);
-    padding: 20px 30px;
-  "
->
-  <button
-    nz-button
-    nzType="default"
-    class="btn-big-get-a-demo"
-    (click)="handleGetDemo()"
-  >
-    Get a demo
-  </button>
-</div>

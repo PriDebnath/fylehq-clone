@@ -60,7 +60,6 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   ngAfterContentChecked(): void {}
   // @HostListener('window:scroll', [])
   // onWindowScroll() {
-  //   console.log(window.scrollY);
   //   if (window.scrollY > 50) {
   //     this.showNavInfo = false;
   //   } else {
@@ -87,8 +86,6 @@ export class HomeComponent implements OnInit, AfterContentChecked {
   startObserveringImages() {
     // Select all images you want to apply the fade-in effect
     const images = document.querySelectorAll('.fade-in-img');
-    console.log({ images });
-
     // Create an Intersection Observer instance
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {

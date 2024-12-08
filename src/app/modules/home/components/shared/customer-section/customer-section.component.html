@@ -1,21 +1,43 @@
-<p>customer-section works!</p>
-<div class="customer-card-container" [ngClass]="{ 'fade-in': showCardDetails }">
+<div
+  class="customer-card-container overflow-hidden"
+  [ngClass]="{ 'fade-in': showCardDetails }"
+>
   <div class="position-relative d-flex" style="z-index: 2">
-    <div class="customer-card-container__img-container" [@fadeAnimation]>
+    <div
+      class="customer-card-container__img-container"
+      [@fadeAnimation]
+      [ngStyle]="{
+        'min-width': isMobile ? '0px' : '230px',
+        'mx-width': isMobile ? '0px' : '230px'
+      }"
+    >
       <img
-        style="height: 335px; width: 100%"
+        [ngStyle]="{
+          height: isMobile ? '90px' : '335px',
+          width: isMobile ? '90px' : '100%',
+          position :isMobile &&  'absolute',
+        }"
+        style="top: -90px; left: 90px"
         [src]="cards[currentCardIndex].customer_image"
         alt="Profile Picture"
       />
     </div>
 
-    <!-- <blockquote>{{ cards[currentCardIndex].feedback }}</blockquote> -->
     <div
       class="customer-card-container__detail-container px-5 d-flex flex-column justify-content-between quote"
     >
-      <div class="d-flex align-items-center">
+      <div
+        class="d-flex align-items-center position-relative"
+        [ngStyle]="{
+          'margin-left': isMobile ? '150px' : '0px',
+          'top': isMobile ? '-50px' : '0px',
+        }"
+      >
         <img
-          style="width: auto; height: 60px"
+          style="width: auto"
+          [ngStyle]="{
+            'height': isMobile ? '45px' : '60px',
+          }"
           [src]="cards[currentCardIndex].customer_logo"
           alt="customer_logo"
         />
@@ -32,14 +54,17 @@
           </p>
         </ng-container>
       </div>
-      <div class="feedback">
+      <div class="feedback" [ngClass]="isMobile ? 'py-5 mx-5' : 'py-2'">
         <h3
           class="color-brand-black font-size-16px font-weight-500 line-height-1-4"
         >
           {{ cards[currentCardIndex].feedback }}
         </h3>
       </div>
-      <div class="d-flex align-items-center">
+      <div
+        class="d-flex align-items-center"
+        [ngClass]="isMobile ? ' mx-5' : ' '"
+      >
         @for (person of cards[currentCardIndex].person_list; track
         person.name;let last = $last) {
         <div class="me-3">
@@ -65,8 +90,12 @@
       style="bottom: 0; right: 0; height: 100%; width: 100%"
     >
       <div
-        class="card-navigation d-flex align-items-center justify-content-center"
+        class="card-navigation d-flex align-items-center justify-content-between justify-content-md-end w-100"
       >
+        <ng-container *ngIf="isMobile">
+          <button (click)="prevCard()" class="card-prev"></button>
+        </ng-container>
+
         <div
           class="count px-5 font-size-10px color-brand-black font-weight-500 line-height-1-4"
         >
@@ -74,7 +103,11 @@
           {{ cards.length }}
         </div>
         <div>
-          <button (click)="prevCard()" class="card-prev"></button>
+          <button
+            *ngIf="!isMobile"
+            (click)="prevCard()"
+            class="card-prev"
+          ></button>
           <button (click)="nextCard()" class="card-next"></button>
         </div>
       </div>

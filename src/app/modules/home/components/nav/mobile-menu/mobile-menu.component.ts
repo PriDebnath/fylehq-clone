@@ -147,7 +147,5 @@ export class MobileMenuComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // this.col1 = this.dropdownContentProductComponent.cardData.col1;
-    // console.log(this.dropdownContentProductComponent);
-    // console.log(this.col1);
   }
 }

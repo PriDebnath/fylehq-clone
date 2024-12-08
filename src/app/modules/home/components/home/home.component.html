@@ -176,7 +176,7 @@
 </div>
 
 <div class="brand-container m-auto">
-  <app-customer-section></app-customer-section>
+  <app-customer-section [isMobile]="isMobile"></app-customer-section>
 </div>
 <div class="brand-container m-auto py-5">
   <a
@@ -333,38 +333,63 @@
     <app-bank-grade-security-section></app-bank-grade-security-section>
   </div>
 </div>
-<div class="row p-5">
-  <div class="col-12 col-md-6">
-    <div
-      class="px-5 d-flex flex-column align-items-center justify-content-center"
-      style="height: 100%"
-    >
-      <div class="py-3">
-        <app-headline-and-subline
-          headline="One expense management app to do it all."
-        ></app-headline-and-subline>
-      </div>
+<div class="brand-container m-auto">
+  <div class="row p-2">
+    <div class="col-12 col-md-6">
+      <div
+        class="px-5 d-flex flex-column align-items-center justify-content-center"
+        style="height: 100%"
+      >
+        <div class="py-3">
+          <app-headline-and-subline
+            headline="One expense management app to do it all."
+          ></app-headline-and-subline>
+        </div>
 
-      <div class="text-center w-100" *ngIf="!isMobile">
-        <button
-          nz-button
-          nzType="default"
-          class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
-          (click)="handleGetDemo()"
-        >
-          Get a demo
-        </button>
+        <div class="text-center w-100" *ngIf="!isMobile">
+          <button
+            nz-button
+            nzType="default"
+            class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
+            (click)="handleGetDemo()"
+          >
+            Get a demo
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="/assets/images/badges-ratings-3x.png" />
       </div>
     </div>
     <div class="col-12 col-md-6">
-      <img src="/assets/images/badges-ratings-3x.png" />
+      <img src="/assets/images/badges-ratings-3x.webp" />
     </div>
+    <div class="" style="height: 15rem"></div>
   </div>
-  <div class="col-12 col-md-6">
-    <img src="/assets/images/badges-ratings-3x.webp" />
-  </div>
-  <div class="" style="height: 15rem"></div>
 </div>
+<!-- Mobile fixed get demo button -->
+<div
+  *ngIf="isMobile"
+  class="position-sticky w-100 overflow-hidden d-flex justify-content-center d-sm-none"
+  style="
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: 0;
+    background-color: var(--brand-black);
+    padding: 20px 30px;
+  "
+>
+  <button
+    nz-button
+    nzType="default"
+    class="btn-big-get-a-demo"
+    (click)="handleGetDemo()"
+  >
+    Get a demo
+  </button>
+</div>
+
 <div style="background-color: var(--brand-black)">
   <div class="brand-container m-auto">
     <app-footer></app-footer>

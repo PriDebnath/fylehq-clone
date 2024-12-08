@@ -6,19 +6,19 @@
   class=""
   [ngStyle]="{ 'margin-top': showInfo && !isMobile ? '124px' : '44px' }"
 >
-  <!-- <app-header></app-header> -->
+  <app-header></app-header>
 </div>
 <div class="brand-container m-auto">
   <div class="d-flex justify-content-center">
     <div class="col col-12 col-lg-10">
-      <!-- <app-headline-and-subline
+      <app-headline-and-subline
         [containerStyle]="{ padding: '0 15px' }"
         [containerClass]="{ 'text-center': true }"
         headline="Tired of chasing employees for expense receipts and manually matching credit card expenses?"
         subline="Stop dealing with shoeboxes of receipts and tedious spreadsheets. Fyle helps you collect receipts 5X faster via text messages, codes expenses automatically, matches them to the right transactions, and exports them to your accounting system, giving you the shortest time to close."
-      ></app-headline-and-subline> -->
+      ></app-headline-and-subline>
       <!-- Current way vs Fyle way -start -->
-      <!-- <div class="d-flex flex-xl-row flex-column justify-content-between">
+      <div class="d-flex flex-xl-row flex-column justify-content-between">
         <div class="col-11 col-xl-6 blue-white-gradient-bg">
           <h3
             class="color-brand-black font-size-24px font-weight-500 line-height-1-4 py-4 text-center"
@@ -35,9 +35,9 @@
           </h3>
           <img src="/assets/images/fyle-way.png" />
         </div>
-      </div> -->
+      </div>
       <!-- Current way vs Fyle way -end-->
-      <!-- <div class="my-4 py-4">
+      <div class="my-4 py-4">
         <app-headline-and-subline
           [containerStyle]="{ padding: '0 15px' }"
           [containerClass]="{ 'text-center': true }"
@@ -46,11 +46,11 @@
           link="https://www.fylehq.com/expense-receipt-tracking"
           linkText=" Explore Fyle’s expense tracking features "
         ></app-headline-and-subline>
-      </div> -->
+      </div>
       <!-- Track expenses on-the-go via text -->
       <div class="row">
         <div class="col col-12 col-md-6">
-          <!-- <app-paragraph
+          <app-paragraph
             [paragraphHeader]="'Track expenses on-the-go via text'"
             paragraphBody="    Users can just text us a picture of their receipt, Fyle’s OCR automatically extracts data like Merchant, Date, Amount and Category, eliminating manual effort."
           ></app-paragraph>
@@ -59,7 +59,7 @@
           <app-paragraph
             [paragraphHeader]="'Let Fyle’s AI code the expense'"
             paragraphBody="Fyle’s AI prompts users for additional expense data like Projects, Cost Codes, and Memos via text. It codes expenses according to your GL, freeing you from unnecessary follow ups."
-          ></app-paragraph> -->
+          ></app-paragraph>
           <!-- Tick list start -->
           <div class="py-3">
             @for (item of tickList; track item;let last = $last) {
@@ -96,16 +96,16 @@
             ></app-link-with-right-arrow>
           </div>
         </div>
-        <!-- <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6">
           <div><img src="/assets/images/current-way.png" /></div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- See employee spend in real-time, like never before -->
 <div class="brand-container m-auto">
-  <!-- <div class="row flex-wrap-reverse py-5">
+  <div class="row flex-wrap-reverse py-5">
     <div class="col col-12 col-md-6">
       <div><img src="/assets/images/real-time-spend.png" /></div>
     </div>
@@ -143,10 +143,10 @@
         subline="* Real-time transaction data available for Visa, Mastercard and American Express virtual Cards."
       ></app-headline-and-subline>
     </div>
-  </div> -->
+  </div>
 
   <!--  -->
-  <!-- <div class="py-5">
+  <div class="py-5">
     <app-feature-section
       headline="Automate credit card reconciliation"
       subline="Fyle helps you collect receipts via text and automatically matches them to the right transactions. Don't waste hours every month on manual reconciliation, and close books on time."
@@ -172,11 +172,11 @@
       linkText="Learn more about accounting integrations"
       [link]="'https://www.fylehq.com/product/integrations'"
     ></app-feature-section>
-  </div> -->
+  </div>
 </div>
 
 <div class="brand-container m-auto">
-  <!-- <app-customer-section></app-customer-section> -->
+  <app-customer-section></app-customer-section>
 </div>
 <div class="brand-container m-auto py-5">
   <a
@@ -215,8 +215,8 @@
     </span>
   </a>
 </div>
-<!--<div class="m-auto real-time" style="padding: 5rem 0">
-   <h2 class="font-size-30px font-weight-500 text-center pb-3">
+<div class="m-auto real-time" style="padding: 5rem 0">
+  <h2 class="font-size-30px font-weight-500 text-center pb-3">
     Explore real-time expense management with Fyle
   </h2>
   <div class="text-center w-100">
@@ -229,8 +229,8 @@
       Get a demo
     </button>
   </div>
-</div> -->
-<!-- <div class="brand-container m-auto">
+</div>
+<div class="brand-container m-auto">
   <div class="m-5 p-5">
     <app-headline-and-subline
       [containerStyle]="{ padding: '0 15px' }"
@@ -240,8 +240,8 @@
     decisions with accurate data in one place."
     ></app-headline-and-subline>
   </div>
-</div> -->
-<!-- <div class="brand-container m-auto">
+</div>
+<div class="brand-container m-auto">
   <div class="row">
     @for ( item of realTimeSpendVisibilityCardData; track $index){
     <div class="col-12 col-md-4 px-5 px-md-3">
@@ -254,7 +254,7 @@
     </div>
     }
   </div>
-</div> -->
+</div>
 <app-our-attention-section></app-our-attention-section>
 <div
   style="
@@ -364,4 +364,9 @@
     <img src="/assets/images/badges-ratings-3x.webp" />
   </div>
   <div class="" style="height: 15rem"></div>
+</div>
+<div style="background-color: var(--brand-black)">
+  <div class="brand-container m-auto">
+    <app-footer></app-footer>
+  </div>
 </div>

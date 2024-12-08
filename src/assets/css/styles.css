@@ -38,6 +38,9 @@ img {
 
 /* TEXT COLOR */
 
+.color-inherit {
+  color: inherit !important;
+}
 .color-white {
   color: white !important;
 }

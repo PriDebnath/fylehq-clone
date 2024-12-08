@@ -1,9 +1,34 @@
 .footer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-areas:
+    "product integrations"
+    "product industries"
+    "product  get-started"
+    "business-expertise  resources"
+    "business-expertise  company"
+    "compare  company";
   gap: 16px;
   background-color: var(--brand-black);
   color: #cacdd7;
+}
+
+@media (min-width: 720px) {
+  .footer {
+    grid-template-areas:
+      "product integrations business-expertise"
+      "product industries business-expertise"
+      "product industries get-started "
+      "compare  industries company"
+      "resources  industries company";
+  }
+}
+
+@media (min-width: 920px) {
+  .footer {
+    grid-template-areas:
+      "product integrations business-expertise compare get-started"
+      "product industries business-expertise resources company";
+  }
 }
 
 .footer-column {
@@ -50,10 +75,60 @@
   color: inherit;
 }
 
+/* -- */
+
 .support {
+  color: #cacdd7;
   background-color: var(--brand-black);
+  padding: 32px 0;
+  gap: 16px;
+  display: grid;
+  grid-template-areas:
+    "support-box"
+    "support-links"
+    "support-image-box";
 }
 
+.support-line {
+  height: 1px;
+  margin: 0 1rem;
+  width: 100%;
+  display: block;
+  background-color: hsla(240, 5%, 92%, 0.28);
+}
+
+.support-box {
+  grid-area: support-box;
+  display: flex;
+  align-items: center;
+}
+
+.support-links {
+  grid-area: support-links;
+}
+
+.support-image-box {
+  grid-area: support-image-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 720px) {
+  .support {
+    grid-template-areas:
+      "support-box support-image-box"
+      "support-links support-image-box";
+  }
+
+  .support-box {
+    align-items: end;
+  }
+
+  .support-line-1 {
+    display: none;
+  }
+}
 /* -- */
 
 .footer-end {
@@ -61,8 +136,8 @@
   color: #cacdd7;
   display: grid;
   margin: 32px;
-  padding: 32px 0;
-  gap: 32px;
+  padding: 48px 0;
+  gap: 24px;
   border-top: 2px solid hsla(240, 5%, 92%, 0.28);
   grid-template-areas:
     "social-links"

@@ -1,6 +1,11 @@
 <footer class=" ">
-  <div class="footer">
-    <div class="footer-column" *ngFor="let section of footerData">
+  <div class="footer py-5">
+    <div
+      class="footer-column"
+      [ngClass]="section.classTitle"
+      [ngStyle]="{ 'grid-area': section.classTitle }"
+      *ngFor="let section of footerData"
+    >
       <h3>{{ section.title }}</h3>
       <ul>
         <li *ngFor="let item of section.items">
@@ -26,66 +31,56 @@
   </div>
 
   <div class="support">
+    <h3 style="color: white" class="support-box font-size-16px font-weight-500">
+      <span class="support-line support-line-1"></span>
+      SUPPORT
+      <span class="support-line support-line-2"></span>
+    </h3>
+
     <div
-      class="d-flex align-items-center justify-content-between"
-      style="gap: 2rem; padding: 2rem 0"
+      class="support-links d-flex flex-column justify-content-center align-items-center align-items-md-start"
     >
-      <div>
-        <h3
-          style="color: white"
-          class="font-size-16px d-flex align-items-end font-weight-500"
+      <p class="d-flex">
+        <a
+          class="color-inherit font-size-14px text-center p-3 ps-0"
+          href="https://help.fylehq.com/?_gl=1*rhrl41*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ."
         >
-          SUPPORT
-          <span
-            style="
-              height: 1px;
-              margin-left: 1rem;
-              width: 100%;
-              display: block;
-              background-color: hsla(240, 5%, 92%, 0.28);
-            "
-          ></span>
-        </h3>
-        <div class="d-flex align-items-center">
+          Help Center
+        </a>
+        <a
+          href="https://www.fylehq.com/implementation"
+          class="color-inherit font-size-14px text-center p-3"
+        >
+          Implementation
+        </a>
+      </p>
+      <p>
+        <span class="color-inherit font-size-14px"
+          >Reach us at:
           <a
-            class="color-brand-grey font-size-14px"
-            href="https://help.fylehq.com/?_gl=1*rhrl41*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ."
+            href="support@fylehq.com"
+            style="text-decoration: underline; color: white"
+            class="font-size-14px underline text-underline"
           >
-            Help Center
+            {{ "support@fylehq.com" }}
           </a>
-          <a
-            href="https://www.fylehq.com/implementation"
-            class="px-5 color-brand-grey font-size-14px"
-          >
-            Implementation
-          </a>
-          <span class="color-brand-grey font-size-14px"
-            >Reach us at:
-            <a
-              href="support@fylehq.com"
-              style="text-decoration: underline"
-              class="color-brand-grey font-size-14px underline text-underline"
-            >
-              {{ "support@fylehq.com" }}
-            </a>
-          </span>
-        </div>
-      </div>
-      <div class="d-flex align-items-center">
-        <img
-          src="/assets/images/support-1.png"
-          style="width: 70px; height: 70px"
-        />
-        <img
-          class="mx-5"
-          src="/assets/images/support-2.png"
-          style="width: 70px; height: 70px"
-        />
-        <img
-          src="/assets/images/support-3.png"
-          style="width: 70px; height: 70px"
-        />
-      </div>
+        </span>
+      </p>
+    </div>
+    <div class="support-image-box">
+      <img
+        src="/assets/images/support-1.png"
+        style="width: 70px; height: 70px"
+      />
+      <img
+        class="mx-5"
+        src="/assets/images/support-2.png"
+        style="width: 70px; height: 70px"
+      />
+      <img
+        src="/assets/images/support-3.png"
+        style="width: 70px; height: 70px"
+      />
     </div>
   </div>
 

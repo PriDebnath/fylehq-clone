@@ -9,6 +9,7 @@ export class FooterComponent {
   footerData = [
     {
       title: 'Product',
+      classTitle: 'product',
       items: [
         {
           text: 'Text Messages',
@@ -84,6 +85,7 @@ export class FooterComponent {
     },
     {
       title: 'Integrations',
+      classTitle: 'integrations',
       items: [
         {
           text: 'Netsuite',
@@ -127,32 +129,10 @@ export class FooterComponent {
         },
       ],
     },
-    {
-      title: 'Industries',
-      items: [
-        {
-          text: 'Construction',
-          redirectTo: 'https://www.fylehq.com/solutions/industry/construction',
-        },
-        {
-          text: 'Non-profits',
-          redirectTo:
-            'https://www.fylehq.com/solutions/industry/non-profit-organizations',
-        },
-        {
-          text: 'Technology',
-          redirectTo:
-            'https://www.fylehq.com/solutions/industry/information-technology',
-        },
-        {
-          text: 'Professional Services',
-          redirectTo:
-            'https://www.fylehq.com/solutions/industry/professional-services',
-        },
-      ],
-    },
+
     {
       title: 'Business Expertise',
+      classTitle: 'business-expertise',
       items: [
         {
           text: 'Expense Management Software',
@@ -201,8 +181,10 @@ export class FooterComponent {
         },
       ],
     },
+
     {
       title: 'Compare',
+      classTitle: 'compare',
       items: [
         {
           text: 'Fyle vs Expensify',
@@ -226,8 +208,11 @@ export class FooterComponent {
         },
       ],
     },
+
     {
       title: 'Get Started',
+      classTitle: 'get-started',
+
       items: [
         { text: 'Pricing', redirectTo: 'https://www.fylehq.com/pricing' },
         { text: 'Get a Demo', redirectTo: 'https://www.fylehq.com/#' },
@@ -239,7 +224,34 @@ export class FooterComponent {
       ],
     },
     {
+      title: 'Industries',
+      classTitle: 'industries',
+
+      items: [
+        {
+          text: 'Construction',
+          redirectTo: 'https://www.fylehq.com/solutions/industry/construction',
+        },
+        {
+          text: 'Non-profits',
+          redirectTo:
+            'https://www.fylehq.com/solutions/industry/non-profit-organizations',
+        },
+        {
+          text: 'Technology',
+          redirectTo:
+            'https://www.fylehq.com/solutions/industry/information-technology',
+        },
+        {
+          text: 'Professional Services',
+          redirectTo:
+            'https://www.fylehq.com/solutions/industry/professional-services',
+        },
+      ],
+    },
+    {
       title: 'Resources',
+      classTitle: 'resources',
       items: [
         { text: 'Blog', redirectTo: 'https://www.fylehq.com/blog' },
         {
@@ -262,6 +274,8 @@ export class FooterComponent {
     },
     {
       title: 'Company',
+      classTitle: 'company',
+
       items: [
         { text: 'About Us', redirectTo: 'https://www.fylehq.com/company' },
         {

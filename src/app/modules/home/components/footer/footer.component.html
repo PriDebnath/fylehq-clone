@@ -1,0 +1,149 @@
+<footer class=" ">
+  <div class="footer">
+    <div class="footer-column" *ngFor="let section of footerData">
+      <h3>{{ section.title }}</h3>
+      <ul>
+        <li *ngFor="let item of section.items">
+          <ng-container *ngIf="item.subItems; else singleItem">
+            {{ item.text }}
+            <ul>
+              <li *ngFor="let subItem of item.subItems">
+                <a [href]="subItem.redirectTo">{{ subItem.text }}</a>
+              </li>
+            </ul>
+          </ng-container>
+          <ng-template #singleItem>
+            <a
+              *ngIf="item.redirectTo; else plainText"
+              [href]="item.redirectTo"
+              >{{ item.text }}</a
+            >
+            <ng-template #plainText>{{ item.text }}</ng-template>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="support">
+    <div
+      class="d-flex align-items-center justify-content-between"
+      style="gap: 2rem; padding: 2rem 0"
+    >
+      <div>
+        <h3
+          style="color: white"
+          class="font-size-16px d-flex align-items-end font-weight-500"
+        >
+          SUPPORT
+          <span
+            style="
+              height: 1px;
+              margin-left: 1rem;
+              width: 100%;
+              display: block;
+              background-color: hsla(240, 5%, 92%, 0.28);
+            "
+          ></span>
+        </h3>
+        <div class="d-flex align-items-center">
+          <a
+            class="color-brand-grey font-size-14px"
+            href="https://help.fylehq.com/?_gl=1*rhrl41*_gcl_au*NDMyODI2MDEzLjE3MzE1NjU3NDQ."
+          >
+            Help Center
+          </a>
+          <a
+            href="https://www.fylehq.com/implementation"
+            class="px-5 color-brand-grey font-size-14px"
+          >
+            Implementation
+          </a>
+          <span class="color-brand-grey font-size-14px"
+            >Reach us at:
+            <a
+              href="support@fylehq.com"
+              style="text-decoration: underline"
+              class="color-brand-grey font-size-14px underline text-underline"
+            >
+              {{ "support@fylehq.com" }}
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <img
+          src="/assets/images/support-1.png"
+          style="width: 70px; height: 70px"
+        />
+        <img
+          class="mx-5"
+          src="/assets/images/support-2.png"
+          style="width: 70px; height: 70px"
+        />
+        <img
+          src="/assets/images/support-3.png"
+          style="width: 70px; height: 70px"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-end">
+    <div class="footer-end__links">
+      <a
+        href="https://www.fylehq.com/privacy/privacy-policy"
+        class="hover-underline font-size-16px color-inherit py-2"
+        >Policy</a
+      >
+
+      <a
+        href="https://www.fylehq.com/privacy/terms-and-conditions"
+        class="hover-underline font-size-16px color-inherit px-3 py-2"
+        >Terms and conditions</a
+      >
+
+      <a
+        href="https://www.fylehq.com/privacy/gdpr"
+        class="hover-underline font-size-16px color-inherit px-3 py-2"
+        >GDPR compliance</a
+      >
+
+      <a
+        href="https://www.fylehq.com/privacy/cookie-policy"
+        class="hover-underline font-size-16px color-inherit py-2"
+        >Cookie policy</a
+      >
+    </div>
+    <div
+      class="footer-end__social-links d-flex align-items-center justify-content-center justify-content-md-between"
+    >
+      <a href="https://www.facebook.com/FyleHQ">
+        <img
+          src="/assets/images/facebook-footer.svg"
+          class="footer-social-logo"
+        />
+      </a>
+
+      <a href="https://www.instagram.com/teamFyle/">
+        <img
+          src="/assets/images/instagram-footer.svg"
+          class="footer-social-logo"
+        />
+      </a>
+      <a href="https://x.com/FyleHQ">
+        <img src="/assets/images/x-footer.svg" class="footer-social-logo" />
+      </a>
+      <a href="https://www.linkedin.com/company/fyle/">
+        <img
+          src="/assets/images/linkedin-footer.svg"
+          class="footer-social-logo"
+        />
+      </a>
+    </div>
+    <div class="footer-end__copy-right font-size-16px">
+      <p>© 2024, Fyle™ Inc. All rights reserved.</p>
+      <p>Fyle™ is the registered trademark of Fyle™ Inc.</p>
+    </div>
+  </div>
+</footer>

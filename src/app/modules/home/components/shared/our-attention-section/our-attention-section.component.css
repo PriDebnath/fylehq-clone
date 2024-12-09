@@ -12,9 +12,10 @@
 @media (min-width: 772px) {
   .box-container {
     grid-template-areas:
-      "box-1 box-4"
-      "box-2 box-4"
-      "box-3 box-4";
+      "box-1 box-3"
+      "box-2 box-3"
+      "box-4 box-3";
+    grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -1,5 +1,5 @@
 <ng-container *ngIf="!isMobile; else mobileScreen">
-  <div class="py-5">
+  <section class="py-5">
     <img [src]="imgSrc" />
     <h3
       class="color-brand-black font-size-16px font-weight-700 line-height-1-4"
@@ -13,10 +13,10 @@
       {{ item }}
     </li>
     }
-  </div>
+  </section>
 </ng-container>
 <ng-template #mobileScreen>
-  <div class="py-5">
+  <section class="py-5">
     <h3
       class="color-brand-black font-size-16px font-weight-700 line-height-1-4"
     >
@@ -30,5 +30,5 @@
       {{ item }}
     </li>
     }
-  </div>
+  </section>
 </ng-template>

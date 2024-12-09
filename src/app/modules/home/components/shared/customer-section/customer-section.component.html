@@ -18,17 +18,17 @@
           left: isMobile ? '60px' : '90px',
           position :isMobile &&  'absolute',
         }"
-        style="top: -90px;"
+        style="top: -90px"
         [src]="cards[currentCardIndex].customer_image"
         alt="Profile Picture"
       />
     </div>
 
     <div
-      class="customer-card-container__detail-container px-5 d-flex flex-column justify-content-between quote"
+      class="customer-card-container__detail-container px-2 px-md-5 d-flex flex-column justify-content-between quote"
     >
       <div
-        class="d-flex align-items-center position-relative"
+        class="d-flex flex-wrap align-items-center position-relative"
         [ngStyle]="{
           'margin-left': isMobile ? '120px' : '0px',
           'top': isMobile ? '-50px' : '0px',
@@ -45,7 +45,7 @@
         <ng-container *ngIf="cards[currentCardIndex].employees">
           <p
             class="color-brand-black font-size-14px font-weight-500 line-height-1-4"
-            style="white-space: nowrap;"
+            style="white-space: nowrap"
           >
             <span
               class="color-brand-grey font-size-14px font-weight-500 line-height-1-4 px-1 px-md-3"
@@ -99,7 +99,7 @@
         </ng-container>
 
         <div
-          class="count px-5 font-size-10px color-brand-black font-weight-500 line-height-1-4"
+          class="count px-1 px-md-5 font-size-10px color-brand-black font-weight-500 line-height-1-4"
         >
           {{ currentCardIndex + 1 }}/
           {{ cards.length }}

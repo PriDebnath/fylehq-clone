@@ -10,6 +10,10 @@
 
 /* CSS RESET */
 
+* {
+  border: 2px solid rgba(90, 90, 90, 0.3);
+}
+
 body {
   font-family: sans-serif !important;
 }

@@ -15,9 +15,10 @@
         [ngStyle]="{
           height: isMobile ? '90px' : '335px',
           width: isMobile ? '90px' : '100%',
+          left: isMobile ? '60px' : '90px',
           position :isMobile &&  'absolute',
         }"
-        style="top: -90px; left: 90px"
+        style="top: -90px;"
         [src]="cards[currentCardIndex].customer_image"
         alt="Profile Picture"
       />
@@ -29,14 +30,14 @@
       <div
         class="d-flex align-items-center position-relative"
         [ngStyle]="{
-          'margin-left': isMobile ? '150px' : '0px',
+          'margin-left': isMobile ? '120px' : '0px',
           'top': isMobile ? '-50px' : '0px',
         }"
       >
         <img
           style="width: auto"
           [ngStyle]="{
-            'height': isMobile ? '45px' : '60px',
+            'height': isMobile ? '35px' : '60px',
           }"
           [src]="cards[currentCardIndex].customer_logo"
           alt="customer_logo"
@@ -44,9 +45,10 @@
         <ng-container *ngIf="cards[currentCardIndex].employees">
           <p
             class="color-brand-black font-size-14px font-weight-500 line-height-1-4"
+            style="white-space: nowrap;"
           >
             <span
-              class="color-brand-grey font-size-14px font-weight-500 line-height-1-4 px-3"
+              class="color-brand-grey font-size-14px font-weight-500 line-height-1-4 px-1 px-md-3"
             >
               {{ "|" }}
             </span>

@@ -116,7 +116,7 @@
       <app-paragraph
         paragraphBody="Fyle directly integrates with your existing business cards:            "
       ></app-paragraph>
-      <div class="d-flex p-3">
+      <div class="d-flex flex-wrap p-2 p-md-3">
         <a href="https://www.fylehq.com/product/cards/visa">
           <img
             src="/assets/images/visa-logo.webp"
@@ -175,7 +175,7 @@
   </div>
 </div>
 
-<div class="brand-container m-auto">
+<div class="brand-container m-auto overflow-hidden">
   <app-customer-section [isMobile]="isMobile"></app-customer-section>
 </div>
 <div class="brand-container m-auto py-5">
@@ -231,7 +231,7 @@
   </div>
 </div>
 <div class="brand-container m-auto">
-  <div class="m-5 p-5">
+  <div class="m-2 m-md-5 p-2 p-md-5">
     <app-headline-and-subline
       [containerStyle]="{ padding: '0 15px' }"
       [containerClass]="{ 'text-center': true, 'px-4': true }"
@@ -322,39 +322,38 @@
     <app-bank-grade-security-section></app-bank-grade-security-section>
   </div>
 </div>
-<div
-  class="brand-container m-auto pt-3"
-  style="background: linear-gradient(180deg, #f6faff, hsla(0, 0%, 100%, 0))"
->
-  <div class="row py-5">
-    <div class="col-12 col-md-6">
-      <div
-        class="d-flex flex-column align-items-center justify-content-center"
-        style="height: 100%"
-      >
-        <div class="py-3">
-          <app-headline-and-subline
-            headline="One expense management app to do it all."
-          ></app-headline-and-subline>
-        </div>
+<div style="background: linear-gradient(180deg, #f6faff, hsla(0, 0%, 100%, 0))">
+  <div class="brand-container m-auto pt-3">
+    <div class="row py-5">
+      <div class="col-12 col-md-6">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+          style="height: 100%"
+        >
+          <div class="py-3">
+            <app-headline-and-subline
+              headline="One expense management app to do it all."
+            ></app-headline-and-subline>
+          </div>
 
-        <div class="text-center w-100" *ngIf="!isMobile">
-          <button
-            nz-button
-            nzType="default"
-            class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
-            (click)="handleGetDemo()"
-          >
-            Get a demo
-          </button>
+          <div class="text-center w-100" *ngIf="!isMobile">
+            <button
+              nz-button
+              nzType="default"
+              class="btn-big-get-a-demo d-none d-sm-inherit m-auto"
+              (click)="handleGetDemo()"
+            >
+              Get a demo
+            </button>
+          </div>
         </div>
-      </div>
-      <!-- <div class="col-12 col-md-6">
+        <!-- <div class="col-12 col-md-6">
         <img src="/assets/images/badges-ratings-3x.webp" />
       </div> -->
-    </div>
-    <div class="col-12 col-md-6 px-5 px-md-0">
-      <img src="/assets/images/badges-ratings-3x.webp" />
+      </div>
+      <div class="col-12 col-md-6 px-5 px-md-0">
+        <img src="/assets/images/badges-ratings-3x.webp" />
+      </div>
     </div>
   </div>
 </div>

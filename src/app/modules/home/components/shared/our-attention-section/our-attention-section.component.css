@@ -1,6 +1,6 @@
 .box-container {
   display: grid;
-  padding: 4rem 3rem;
+  padding: 2rem 1.5rem;
   grid-template-areas:
     "box-1"
     "box-2"
@@ -16,6 +16,7 @@
       "box-2 box-3"
       "box-4 box-3";
     grid-template-columns: 1fr 1fr;
+    padding: 4rem 3rem;
   }
 }
 
